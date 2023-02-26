@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gray's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- pad the body slightly more on the x-axis -->
+<body class="py-3 px-5">
+    <div class="d-flex row">
+        <!-- the left side of this first row will hold my bio card -->
+        <div class="side col-lg-4">
+            <card class="card border-3 mt-5" style="width: 18rem">
+                <div class="bg-gray">
+                    <img class="headshot" src="./static/portfolio.png" alt="Gray Boulware Headshot">
+                </div>
+                <div class="bio bg-fafafa">
+                    <h3 class="text-decoration-underline text-center text-primary fw-bolder">Gray Boulware</h3>
+                    <p class="text-center text-center border-bottom border-3 text-secondary fst-italic fw-bold">Product Manager | Software Engineer</p>
+                    <h4 class="text-decoration-underline text-center text-primary fw-bolder">Top Skills</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item active">UI/UX Design</li>
+                        <li class="list-group-item">APIs</li>
+                        <li class="list-group-item active">Full Stack Development</li>
+                        <li class="list-group-item">Customer Discovery</li>
+                        <li class="list-group-item active">SQL & Python Data Analytics</li>
+                        <li class="list-group-item disabled text-decoration-line-through">Failure</li>
+                    </ul>
+                </div>
+                <div class="icon-tray d-flex justify-content-around pt-2 bg-primary">
+                    <a href="https://github.com/MGBoulware88/"><input title="Follow me on gitHub" class="icon" type="image" src="./static/github.svg" alt="gitHub link"></a>
+                    <a href="https://www.linkedin.com/in/gray-boulware-6538345b/"><input title="Connect with me on LinkedIn" class="icon" type="image" src="./static/linkedin.svg" alt="LinkedIn link"></a>
+                    <a title="Email me" href="mailto:gray.boulware@gmail.com"><input class="icon" type="image" src="./static/envelope-at-fill.svg" alt="email link"></a>
+                    <a href="./static/GrayBoulware_Resume&References.pdf"><input title="Download my resumè" class="icon" type="image" src="./static/file-text-fill.svg" alt="resumè link"></a>
+                </div>
+            </card>
+        </div>
+        <!-- this section will have the welcome message, my personal mission statement, another p tbd, and an array-powered daily fun fact or joke -->
+        <div class="main col-lg-8 text-center ps-5">
+            <h1 class="text-center text-primary fw-bolder text-decoration-underline mb-5 text-wrap">Hello & Welcome!</h1>
+            <p class="border-bottom border-primary pb-2  text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore eaque laudantium consequatur iusto saepe vel consectetur praesentium, earum repudiandae adipisci corrupti voluptatem illum sit est! Voluptates ipsa nulla qui!</p>
+            <p class="border-bottom border-primary pb-2 text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore eaque laudantium consequatur iusto saepe vel consectetur praesentium, earum repudiandae adipisci corrupti voluptatem illum sit est! Voluptates ipsa nulla qui!</p>
+            <p class="border-bottom border-primary pb-2 text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore eaque laudantium consequatur iusto saepe vel consectetur praesentium, earum repudiandae adipisci corrupti voluptatem illum sit est! Voluptates ipsa nulla qui!</p>
+            <img class="img-fluid" src="./static/yifei-wong-UMnCZnDDGOU-unsplash.jpg" alt="cherry blossoms">
+        </div>
+    </div>
+    <!-- headers for the next part instead of flex-column; I shouldn't need to style them differently, but I like leaving this as a separate row in case I change it to a diff content type and push the headers down a row in the future -->
+    <div class="row pt-3 text-center ">
+        <p class="col-4 text-start fst-italic">Check out this sunset!</p>
+        <h3 class="col-8 text-primary">My Projects! 🤠</h3>
+    </div>
+    <div class="row">
+        <!-- eye candy left column-->
+        <div class="col-lg-4 col-sm-4">
+            <img class="img-fluid" src="./static/wolfgang-hasselmann-B5Qb_KYDKDU-unsplash.jpg" alt="sunset over the ocean">
+        </div>
+        <!-- my projects highlight section -->
+        <div class="col-lg-8 col-sm-8 text-primary">
+            <p class="text-dark text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus culpa fugit, provident nesciunt aliquid porro quaerat nemo maxime facere consectetur repellat deleniti, dignissimos corporis laudantium cupiditate voluptas quae ipsa hic.</p>
+            <div class="d-flex align-items-center p-2">
+                <img class="project-icon" src="./static/pexels-christina-morillo-1181671.jpg" alt="python">
+                <div class="d-flex flex-column">
+                    <p class="text-start ps-4 fw-bold text-decoration-underline">Python Projects</p>
+                    <p class="text-center text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, odit! Excepturi fugiat doloribus voluptates sed!</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center p-2">
+                
+                <img class="project-icon" src="./static/pexels-miguel-á-padriñán-1591061.jpg" alt="html">
+                <div class="d-flex flex-column">
+                    <p class="text-start ps-4 fw-bold text-decoration-underline">HTML5, CSS, JS Projects</p>
+                    <p class="text-center text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, odit! Excepturi fugiat doloribus voluptates sed!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bootstrap's and my script.js for the daily fun fact array -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

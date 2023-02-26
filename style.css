@@ -1,0 +1,22 @@
+/* @media screen and (max-width: 480px) {
+    pass;
+  
+} */
+
+body {
+    background-color: rgb(243, 242, 239);
+}
+
+.headshot {
+    border-radius: 15%;
+    height: 325px;
+}
+.icon {
+    height: 20px;
+}
+.project-icon {
+    height: 100px;
+}
+.bg-fafafa {
+    background-color: #fafafa;
+}
