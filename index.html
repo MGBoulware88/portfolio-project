@@ -11,41 +11,69 @@
 </head>
 <!-- pad the body slightly more on the x-axis -->
 <body class="py-3 px-5">
+    <div class="navbar row">
+        <div class="left-nav col-4">
+            <p>navlinks</p>
+        </div>
+        <div class="site-header col-8">
+            <h1 class="text-center text-primary fw-bolder text-decoration-underline mb-3">Hello & Welcome!</h1>
+        </div>
+    </div>
     <div class="d-flex row">
         <!-- the left side of this first row will hold my bio card -->
         <div class="side col-lg-4">
             <card class="card border-3 mt-5" style="width: 18rem">
                 <div class="bg-gray">
-                    <img class="headshot" src="./static/portfolio.png" alt="Gray Boulware Headshot">
+                    <img class="headshot img-fluid" src="./static/babyphoto.png" alt="Gray Boulware Headshot">
                 </div>
                 <div class="bio bg-fafafa">
-                    <h3 class="text-decoration-underline text-center text-primary fw-bolder">Gray Boulware</h3>
-                    <p class="text-center text-center border-bottom border-3 text-secondary fst-italic fw-bold">Product Manager | Software Engineer</p>
-                    <h4 class="text-decoration-underline text-center text-primary fw-bolder">Top Skills</h4>
+                    <h3 class="text-decoration-underline text-center text-primary fw-bolder fs-4">Gray Boulware</h3>
+                    <p class="text-center text-center border-bottom border-3 text-secondary fs-small fst-italic fw-bold p-1">Product Manager | Software Engineer</p>
+                    <h4 class="text-decoration-underline text-center text-primary fw-bolder fs-4">Top Skills</h4>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item active">UI/UX Design</li>
-                        <li class="list-group-item">APIs</li>
-                        <li class="list-group-item active">Full Stack Development</li>
-                        <li class="list-group-item">Customer Discovery</li>
-                        <li class="list-group-item active">SQL & Python Data Analytics</li>
-                        <li class="list-group-item disabled text-decoration-line-through">Failure</li>
+                        <li class="list-group-item active">Mickey Mouse Club Member</li>
+                        <li class="list-group-item">Coloring inside the lines</li>
+                        <li class="list-group-item active">Full Stack Lego Engineering</li>
+                        <li class="list-group-item">Driving the girls mad</li>
+                        <li class="list-group-item active">Eating all of my dinner</li>
+                        <li class="list-group-item disabled text-decoration-line-through">Wetting the bed</li>
                     </ul>
                 </div>
-                <div class="icon-tray d-flex justify-content-around pt-2 bg-primary">
-                    <a href="https://github.com/MGBoulware88/"><input title="Follow me on gitHub" class="icon" type="image" src="./static/github.svg" alt="gitHub link"></a>
-                    <a href="https://www.linkedin.com/in/gray-boulware-6538345b/"><input title="Connect with me on LinkedIn" class="icon" type="image" src="./static/linkedin.svg" alt="LinkedIn link"></a>
-                    <a title="Email me" href="mailto:gray.boulware@gmail.com"><input class="icon" type="image" src="./static/envelope-at-fill.svg" alt="email link"></a>
-                    <a href="./static/GrayBoulware_Resume&References.pdf"><input title="Download my resumè" class="icon" type="image" src="./static/file-text-fill.svg" alt="resumè link"></a>
+                <div class="icon-tray d-flex justify-content-around pt-2 pb-2 bg-primary align-items-center">
+                    <a href="https://github.com/MGBoulware88/"><input title="Follow me on gitHub" class="mt-1 icon" type="image" src="./static/github.svg" alt="gitHub link"></a>
+                    <a href="https://www.linkedin.com/in/gray-boulware-6538345b/"><input title="Connect with me on LinkedIn" class="icon mt-1" type="image" src="./static/linkedin.svg" alt="LinkedIn link"></a>
+                    <a title="Email me" href="mailto:gray.boulware@gmail.com"><input class="icon mt-1" type="image" src="./static/envelope-at-fill.svg" alt="email link"></a>
+                    <a href="./static/GrayBoulware_Resume&References.pdf"><input title="Download my rèsumè" class="icon mt-1" type="image" src="./static/file-text-fill.svg" alt="rèsumè link"></a>
                 </div>
             </card>
         </div>
         <!-- this section will have the welcome message, my personal mission statement, another p tbd, and an array-powered daily fun fact or joke -->
-        <div class="main col-lg-8 text-center ps-5">
-            <h1 class="text-center text-primary fw-bolder text-decoration-underline mb-5 text-wrap">Hello & Welcome!</h1>
+        <div class="main col-lg-8 ps-5 text-center">
             <p class="border-bottom border-primary pb-2  text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore eaque laudantium consequatur iusto saepe vel consectetur praesentium, earum repudiandae adipisci corrupti voluptatem illum sit est! Voluptates ipsa nulla qui!</p>
             <p class="border-bottom border-primary pb-2 text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore eaque laudantium consequatur iusto saepe vel consectetur praesentium, earum repudiandae adipisci corrupti voluptatem illum sit est! Voluptates ipsa nulla qui!</p>
             <p class="border-bottom border-primary pb-2 text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore eaque laudantium consequatur iusto saepe vel consectetur praesentium, earum repudiandae adipisci corrupti voluptatem illum sit est! Voluptates ipsa nulla qui!</p>
-            <img class="img-fluid" src="./static/yifei-wong-UMnCZnDDGOU-unsplash.jpg" alt="cherry blossoms">
+            <br>
+            <div class="daily">
+                <p class=" text-primary fw-bold fs-4" for="prompt">Would you like to hear a joke or get a fun fact?</p>
+                <select name="choice" id="choice" onchange="(getFactOrJoke(this))" >
+                    <option value="select">Select. . .</option>
+                    <option value="fact">Fun fact please!</option>
+                    <option value="joke">Tell me a joke</option>
+                    <option value="nah">Not Today</option>
+                </select>
+                <!-- add button to confirm selection -->
+                <button class="bg-success text-white" type="submit" id="reveal" onclick="showFactOrJoke(this)">Show me!</button>
+            </div>
+            <div class="row response">
+                <div class="hidden" id="joke">
+                    <p class="setup">'setup text'</p>
+                    <!-- add something to hide punchline until user wants to reveal it -->
+                    <p class="punchline hidden">'punchline text'</p>
+                </div>
+                <p class="hidden" id="fact">'fact'</p>
+                <p class="hidden" id="bummer">Maybe next time!</p>
+            </div>
+            <!-- <img class="img-fluid" src="./static/yifei-wong-UMnCZnDDGOU-unsplash.jpg" alt="cherry blossoms"> -->
         </div>
     </div>
     <!-- headers for the next part instead of flex-column; I shouldn't need to style them differently, but I like leaving this as a separate row in case I change it to a diff content type and push the headers down a row in the future -->

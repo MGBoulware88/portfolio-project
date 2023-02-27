@@ -6,10 +6,16 @@
 body {
     background-color: rgb(243, 242, 239);
 }
+.hidden {
+    display: none;
+}
 
 .headshot {
     border-radius: 15%;
-    height: 325px;
+    /* height: 275px; */
+}
+.fs-small {
+    font-size: 11pt;
 }
 .icon {
     height: 20px;
