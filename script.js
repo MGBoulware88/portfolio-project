@@ -22,10 +22,6 @@ async function getDadJoke() {
 	    .then(response => response.json())
 	    .then(response => console.log(response))
 	    .catch(err => console.error(err));
-    
-    jokeSetup = response.setup;
-    jokePunchline = response.punchline;
-    console.log(jokeSetup);
 }
 
 function getFactOrJoke(element) {
