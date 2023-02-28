@@ -22,8 +22,8 @@ async function getDadJoke() {
     var response = await fetch('https://dad-jokes.p.rapidapi.com/random/joke', options)
 	    .then(response => response.json())
 	    .then(response => console.log(response))
-        .then(jokeSetup = response.data.setup)
-        .then(jokePunchline = response.data.punchline)
+        .then(jokeSetup = response.data("setup"))
+        .then(jokePunchline = response.data("punchline"))
 	    .catch(err => console.error(err));
 }
 
