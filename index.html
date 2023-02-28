@@ -22,7 +22,7 @@
     <div class="d-flex row">
         <!-- the left side of this first row will hold my bio card -->
         <div class="side col-lg-4">
-            <card class="card border-3 mt-5" style="width: 18rem">
+            <card class="card border-3" style="width: 18rem">
                 <div class="bg-gray">
                     <img class="headshot img-fluid" src="./static/babyphoto.png" alt="Gray Boulware Headshot">
                 </div>
@@ -62,12 +62,13 @@
                     <option value="nah">Not Today</option>
                 </select>
                 <!-- add button to confirm selection -->
-                <button class="bg-success text-white" type="submit" id="reveal" onclick="showFactOrJoke(this)">Show me!</button>
+                <button class="bg-success text-white" type="submit" id="reveal" onclick="showFactOrJoke()">Show me!</button>
             </div>
-            <div class="row response">
+            <div class="row response text-center">
                 <div class="hidden" id="joke">
                     <p class="setup">'setup text'</p>
                     <!-- add something to hide punchline until user wants to reveal it -->
+                    <button type="button" onclick="revealPunchline()">Reveal Punchline</button>
                     <p class="punchline hidden">'punchline text'</p>
                 </div>
                 <p class="hidden" id="fact">'fact'</p>

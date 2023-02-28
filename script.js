@@ -10,17 +10,20 @@ const options = {
         'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
     }
 };
-
+var userOptions = document.querySelector("#choice");
+var userChoice = document.querySelector("#choice").value;
+var makeSelection = document.querySelector("#reveal");
+const factDisplay = document.querySelector("#fact");
+var factArr = ["polar bears aren't actually white"];
 var jokeSetup = document.querySelector(".setup").value;
 var jokePunchline = document.querySelector(".punchline").value;
-//planning an array of fun facts/jokes to rotate throughs
-
-//maybe just pick one at random on page load or set it to different hours of the day, so I would want 24 options
 
 async function getDadJoke() {
     var response = await fetch('https://dad-jokes.p.rapidapi.com/random/joke', options)
 	    .then(response => response.json())
 	    .then(response => console.log(response))
+        .then(jokeSetup = response["setup"])
+        .then(jokePunchline = response["punchline"])
 	    .catch(err => console.error(err));
 }
 
@@ -30,6 +33,8 @@ function getFactOrJoke(element) {
     if (answer === "fact") {
         //grab a random fact from the factArr;
         //save to var fact as a string
+        factDisplay.innerHTML = "Polar bears aren't actually white.";
+
     }
     else if (answer === "joke") {
         //grab a random joke from the dadjokes.io API;
@@ -45,6 +50,20 @@ function getFactOrJoke(element) {
     }
 }
 
+function showFactOrJoke()  {
+    
+    document.querySelector("#fact").classList = "";
+}
+
+// function showFactOrJoke() {
+//     console.log("revealing!");
+//     if (userChoice == "fact") {
+//         factDisplay.classList.toggle("hidden");
+//     }
+//     if (userChoice == "joke") {
+//         document.querySelector("#joke").classList.toggle(".hidden");
+//     }
+// }
 
 //add a submit button that replaces the prompt with the result
 //show button once our answer has been updated
@@ -52,18 +71,3 @@ function getFactOrJoke(element) {
 
 
 
-// var userChoice = document.querySelector("#choice");
-
-// document.addEventListener("click", (evt) => {
-//     let userClick = evt.target; 
-
-//     do {
-//         if (userClick == userChoice) { 
-//             return;
-//         }
-//         userClick = userClick.parentNode; 
-//     } while (userClick);
-//     if (userChoice.classList.contains("hidden")) {
-//         userChoice.classList.toggle("hidden");
-//     }
-// })
