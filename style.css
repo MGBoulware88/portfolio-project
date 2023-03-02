@@ -25,7 +25,7 @@ a:hover {
 }
 .daily {
     border-radius: 15px;
-    height: 368px
+    /* height: 368px */
 }
 .side {
     background-color: transparent !important;

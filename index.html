@@ -15,25 +15,23 @@
 <!-- pad the body slightly more on the x-axis -->
 
 <body>
-    <div class="navbar row container-fluid bg-dark">
-        <div class="left-nav col-4 text-white text-uppercase pt-3">
-            <p>Marvin</p>
-        </div>
-    </div>
+    <nav class="navbar row container-fluid bg-dark text-light">
+        <h1>Hello and Welcome!</h1>
+    </nav>
     <div class="px-4 pb-3">
         <div class="d-flex row">
             <!-- the left side of this first row will hold my bio card -->
-            <div class="side col-lg-4">
+            <div class="side col-lg-4 pt-2">
                 <card class="card m-auto border-3" style="width: 18rem">
                     <div class="bg-gray">
                         <img class="headshot img-fluid" src="./static/babyphoto.png" alt="Gray Boulware Headshot">
                     </div>
                     <div class="bio bg-fafafa">
-                        <h3 class="text-decoration-underline text-center text-primary fw-bolder fs-4">Gray Boulware</h3>
+                        <h3 class="text-center text-primary fw-bolder fs-4">Gray Boulware</h3>
                         <p
                             class="text-center text-center border-bottom border-3 text-secondary fs-small fst-italic fw-bold p-1">
                             Product Manager | Software Engineer</p>
-                        <h4 class="text-decoration-underline text-center text-primary fw-bolder fs-4">Top Skills</h4>
+                        <h4 class="text-center text-primary fw-bolder fs-4">Top Skills</h4>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item active">Mickey Mouse Club Member</li>
                             <li class="list-group-item">Coloring inside the lines</li>
@@ -58,20 +56,17 @@
             </div>
             <!-- this section will have the welcome message, my personal mission statement, another p tbd, and an array-powered daily fun fact or joke -->
             <div class="main pt-4 col-lg-8 text-center">
-                <h2>Hello!</h2>
-                <p class="border-bottom border-primary pb-2  text-wrap">Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Esse labore eaque laudantium consequatur iusto saepe vel consectetur praesentium,
-                    earum repudiandae adipisci corrupti voluptatem illum sit est! Voluptates ipsa nulla qui!</p>
+                <p class="border-bottom border-primary pb-2  text-wrap">Howdy, I'm Gray. </p>
                 <p class="border-bottom border-primary pb-2 text-wrap">Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Esse labore eaque laudantium consequatur iusto saepe vel consectetur praesentium,
                     earum repudiandae adipisci corrupti voluptatem illum sit est! Voluptates ipsa nulla qui!</p>
                 <p class="border-bottom border-primary pb-2 text-wrap">Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Esse labore eaque laudantium consequatur iusto saepe vel consectetur praesentium,
                     earum repudiandae adipisci corrupti voluptatem illum sit est! Voluptates ipsa nulla qui!</p>
-                <img class="img-fluid d-flex my-3 github-commit" src="https://ghchart.rshah.org/0d6efd/mgboulware88">
+                <img name="githubchart" class="img-fluid d-flex my-3 github-commit pt-2 mb-0" src="https://ghchart.rshah.org/0d6efd/mgboulware88">
+                <label class="fst-italic fs-small mb-5 mt-0" for="githubchart">My gitHub Uploads chart</label>
                 <br>
-                <!-- use form tag -->
-                <form action="#" target="" class="daily bg-secondary text-light" id="daily">
+                <form action="#" target="" class="daily bg-secondary text-light px-2" id="daily">
                     <p class="fw-bold fs-4" for="prompt">Would you like to hear a joke or get a fun fact?</p>
                     <select name="selection" id="selection">
                         <option value="select">Select One</option>
@@ -85,19 +80,17 @@
                 <!-- <img class="img-fluid" src="./static/yifei-wong-UMnCZnDDGOU-unsplash.jpg" alt="cherry blossoms"> -->
             </div>
         </div>
-        <!-- headers for the next part instead of flex-column; I shouldn't need to style them differently, but I like leaving this as a separate row in case I change it to a diff content type and push the headers down a row in the future -->
         <div class="row pt-3 text-center px-4">
-            <p class="col-4 text-start fst-italic">Check out this sunset!</p>
-            <h3 class="col-8 text-primary">My Projects! 🤠</h3>
         </div>
         <div class="row px-4">
             <!-- eye candy left column-->
-            <div class="col-lg-4 col-sm-4">
+            <div class="col-4">
                 <img class="img-fluid" src="./static/wolfgang-hasselmann-B5Qb_KYDKDU-unsplash.jpg"
-                    alt="sunset over the ocean">
+                alt="sunset over the ocean">
             </div>
             <!-- my projects highlight section -->
-            <div class="col-lg-8 col-sm-8 text-primary">
+            <div class="col-8 text-primary">
+                <h3 class="col-8 text-primary text-center">My Projects! 🤠</h3>
                 <p class="text-dark text-center">Here are some example of projects I have created or contributed to on gitHub</p>
                 <div class="project-container container-fluid d-flex align-items-center p-2"></div>
             </div>

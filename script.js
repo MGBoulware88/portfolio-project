@@ -73,20 +73,9 @@ async function getProjects() {
 });
 }
 
-
-// $.getJSON("https://api.github.com/users/mgboulware88/repos?per_page=53", function (data) {
-//     data.forEach(function (repo) {
-//         if (repo.topics.length > 0) {
-//             $.getJSON(repo.languages_url, function (languages) {
-//                 populate(repo.name, repo.pushed_at, repo, Object.keys(languages));
-//             })
-//         }
-//     });
-// });
-
 function populate(name, pushed_at, repo, languages) {
     var card = document.createElement("div");
-    card.classList.add("card");
+    card.classList.add("card","shadow","rounded");
 
     addLanguages(languages, card);
 
