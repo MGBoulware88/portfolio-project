@@ -6,6 +6,7 @@
 body {
     background-color: rgb(243, 242, 239);
 }
+
 .project-container {
     display: flex;
     flex-wrap: wrap;
@@ -14,19 +15,24 @@ body {
     align-items: center;
     text-align: center;
 }
+
 a {
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 .card {
     width: 13rem;
 }
+
 .daily {
     border-radius: 15px;
     height: 368px
 }
+
 .side {
     background-color: transparent !important;
 }
@@ -34,47 +40,71 @@ a:hover {
 .side .card {
     border-radius: 85px;
 }
+
 .hidden {
     display: none;
 }
+
+.card {
+    border-radius: 15px;
+    -webkit-box-shadow: 15px 16px 34px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 15px 16px 34px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 15px 16px 34px -6px rgba(0, 0, 0, 0.75);
+}
+
+.card p {
+    color: black;
+}
+
 .icon-tray {
     padding: .5rem;
 }
+
 .lang-icons {
     display: flex;
     text-align: center;
     justify-content: center;
     margin: 1rem;
 }
+
 .lang-icons .bx {
     font-size: 1.5rem;
 }
+
 .html {
-  color: #e34c27;
+    color: #e34c27;
 }
+
 .css {
-  color: #4266f5;
+    color: #4266f5;
 }
+
 .javascript {
-  color: #f0d44c;
+    color: #f0d44c;
 }
+
 .github-commit {
     text-align: center;
     margin: auto;
 }
+
 .headshot {
     border-radius: 15%;
     /* height: 275px; */
 }
+
 .fs-small {
     font-size: 11pt;
 }
+
 .icon {
     height: 20px;
 }
+
 .project-icon {
     height: 100px;
 }
+
 .bg-fafafa {
     background-color: #fafafa;
 }
