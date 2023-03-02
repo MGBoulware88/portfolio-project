@@ -159,6 +159,13 @@ function addLanguages(languages, card) {
         icon5.classList.add("css");
         lang_icons.appendChild(icon5);
     }
+    if (languages.includes("Java")) {
+        var icon6 = document.createElement("i");
+        icon6.classList.add("bx");
+        icon6.classList.add("bxl-java");
+        icon6.classList.add("java");
+        lang_icons.appendChild(icon6);
+    }
     lang_icons.appendChild(icon);
     card.appendChild(lang_icons);
 

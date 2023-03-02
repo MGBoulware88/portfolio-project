@@ -71,7 +71,7 @@ a:hover {
 }
 
 .lang-icons .bx {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .html {
@@ -84,6 +84,14 @@ a:hover {
 
 .javascript {
     color: #f0d44c;
+}
+
+.python {
+    color: #346e9e;
+}
+
+.java {
+    color: #f7971a;
 }
 
 .github-commit {
