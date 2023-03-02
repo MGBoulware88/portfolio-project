@@ -20,6 +20,9 @@ async function getKey() {
 
 async function addHTML(key) {
     document.querySelector("#daily").reset();
+    while (textContainer.firstChild) {
+        textContainer.removeChild(textContainer.lastChild);
+    }
     if (userOptions.hasOwnProperty(key)) {
         createHTML(await userOptions[key]());
     }  
