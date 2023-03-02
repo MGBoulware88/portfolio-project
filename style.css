@@ -30,6 +30,10 @@ a:hover {
 .side {
     background-color: transparent !important;
 }
+
+.side .card {
+    border-radius: 85px;
+}
 .hidden {
     display: none;
 }
