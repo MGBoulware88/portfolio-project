@@ -1,66 +1,69 @@
-(function() {
-    getProjects();
-})()
-
+// const userForm = document.querySelector(".daily");
 const factArr = ["polar bears aren't actually white", "2nd fact", "3rd fact", "4th fact"];
+var userSelection = document.querySelector("#selection").value;
 const textContainer = document.querySelector("#container");
 const project_container = document.querySelector(".project-container");
+const jokeOptions = {
+    method: 'GET',
+    url: 'https://jokeapi-v2.p.rapidapi.com/joke/Any',
+    params: {
+      type: 'single',
+      format: 'json',
+      idRange: '0-319',
+      blacklistFlags: 'nsfw,racist,religious,political,sexist,explicit'
+    },
+    headers: {
+      'X-RapidAPI-Key': 'af62c2fa06mshf0b765ef4edb5a1p19978ejsn40af1ecfa88c',
+      'X-RapidAPI-Host': 'jokeapi-v2.p.rapidapi.com'
+    }
+};
 
-const userOptions = {
-    "select": () => "Please select Joke or Fact first.",
-    "joke": getJoke,
-    "fact": getFact,
-    "repo": getProjects
+function updateUserSelection(element) {
+    userSelection = element.value;
+    console.log(userSelection);
 }
 
 async function getKey() {
-    var key = document.querySelector("#selection").value;
-    addHTML(key);
+    if (userSelection === 'select') {
+        addHTML("Please choose Joke or Fact first.");
+    }
+    else if (userSelection === 'joke') {
+        addHTML(await getJoke());
+    }
+    else if (userSelection === 'fact') {
+        addHTML(getFact());
+    }
+    else {
+        addHTML("Unknown error occurred. Please refresh the page and try again.");
+    }
 }
-
-async function addHTML(key) {
-    document.querySelector("#daily").reset();
-    if (userOptions.hasOwnProperty(key)) {
-        createHTML(await userOptions[key]());
-    }  
-}
-
-function createHTML(text) {
-    var newHTML = document.createElement("p");
-    textContainer.append(newHTML);
-    newHTML.innerHTML = text;
-}
-
-async function getJoke() {
-    var response = await axios.get('https://jokeapi-v2.p.rapidapi.com/joke/Any',{
-        params: {
-            type: 'single',
-            format: 'json',
-            idRange: '0-319',
-            blacklistFlags: 'nsfw,racist,religious,political,sexist,explicit'
-          },
-          headers: {
-            'X-RapidAPI-Key': 'af62c2fa06mshf0b765ef4edb5a1p19978ejsn40af1ecfa88c',
-            'X-RapidAPI-Host': 'jokeapi-v2.p.rapidapi.com'
-          }
-    });
-    var jokeText = response.data.joke;
-    console.log(jokeText);
-    return jokeText;
-}
-
+//
 function getFact() {
     var randNum = Math.floor(Math.random() * factArr.length);
     var yourFact = factArr[randNum];
     return yourFact;
 }
+async function getJoke() {
+    let response = await axios.get(jokeOptions);
+    let jokeData = response.data.joke;
+    console.log(jokeData);
+    return jokeData;
+}
+function addHTML(text) {
+    var newHTML = document.createElement("p");
+    textContainer.append(newHTML);
+    newHTML.innerHTML = text;
+}
 
-async function getProjects() {
-    $.getJSON("https://api.github.com/users/mgboulware88/repos?per_page=53", function (data) {
+// async function getProjects() {
+//     let gitProjects = await axios.get("https://api.github.com/users/mgboulware88/repos");
+//     let gitProjectsData = gitProjects.data;    //console.log(gitProjects.data);
+// }
+
+
+//update to axios
+$.getJSON("https://api.github.com/users/mgboulware88/repos?per_page=53", function (data) {
     data.forEach(function (repo) {
-        // $.getJSON(repo.languages_url, function (languages) {
-        //     populate(repo.name, repo.pushed_at, repo, Object.keys(languages));
-        // })
         if (repo.topics.length > 0) {
             $.getJSON(repo.languages_url, function (languages) {
                 populate(repo.name, repo.pushed_at, repo, Object.keys(languages));
@@ -68,18 +71,6 @@ async function getProjects() {
         }
     });
 });
-}
-
-
-// $.getJSON("https://api.github.com/users/mgboulware88/repos?per_page=53", function (data) {
-//     data.forEach(function (repo) {
-//         if (repo.topics.length > 0) {
-//             $.getJSON(repo.languages_url, function (languages) {
-//                 populate(repo.name, repo.pushed_at, repo, Object.keys(languages));
-//             })
-//         }
-//     });
-// });
 
 function populate(name, pushed_at, repo, languages) {
     var card = document.createElement("div");
@@ -127,7 +118,7 @@ function addLanguages(languages, card) {
     if (languages.length == 0) {
         icon.innerHTML = "";
     }
-  
+
     if (languages.includes("HTML")) {
         var icon2 = document.createElement("i");
         icon2.classList.add("bx");
@@ -169,3 +160,5 @@ function toTitleCase(str) {
         }
     );
 }
+
+// populateProjects();

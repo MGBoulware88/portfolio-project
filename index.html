@@ -1,114 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gray's Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
 <!-- pad the body slightly more on the x-axis -->
-<body class="py-3 px-5">
-    <div class="navbar row">
-        <div class="left-nav col-4">
-            <p>navlinks</p>
-        </div>
-        <div class="site-header col-8">
-            <h1 class="text-center text-primary fw-bolder text-decoration-underline mb-3">Hello & Welcome!</h1>
+
+<body>
+    <div class="navbar row container-fluid bg-dark">
+        <div class="left-nav col-4 text-white text-uppercase pt-3">
+            <p>Marvin</p>
         </div>
     </div>
-    <div class="d-flex row">
-        <!-- the left side of this first row will hold my bio card -->
-        <div class="side col-lg-4">
-            <card class="card border-3" style="width: 18rem">
-                <div class="bg-gray">
-                    <img class="headshot img-fluid" src="./static/babyphoto.png" alt="Gray Boulware Headshot">
-                </div>
-                <div class="bio bg-fafafa">
-                    <h3 class="text-decoration-underline text-center text-primary fw-bolder fs-4">Gray Boulware</h3>
-                    <p class="text-center text-center border-bottom border-3 text-secondary fs-small fst-italic fw-bold p-1">Product Manager | Software Engineer</p>
-                    <h4 class="text-decoration-underline text-center text-primary fw-bolder fs-4">Top Skills</h4>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item active">Mickey Mouse Club Member</li>
-                        <li class="list-group-item">Coloring inside the lines</li>
-                        <li class="list-group-item active">Full Stack Lego Engineering</li>
-                        <li class="list-group-item">Driving the girls mad</li>
-                        <li class="list-group-item active">Eating all of my dinner</li>
-                        <li class="list-group-item disabled text-decoration-line-through">Wetting the bed</li>
-                    </ul>
-                </div>
-                <div class="icon-tray d-flex justify-content-around pt-2 pb-2 bg-primary align-items-center">
-                    <a href="https://github.com/MGBoulware88/"><input title="Follow me on gitHub" class="mt-1 icon" type="image" src="./static/github.svg" alt="gitHub link"></a>
-                    <a href="https://www.linkedin.com/in/gray-boulware-6538345b/"><input title="Connect with me on LinkedIn" class="icon mt-1" type="image" src="./static/linkedin.svg" alt="LinkedIn link"></a>
-                    <a title="Email me" href="mailto:gray.boulware@gmail.com"><input class="icon mt-1" type="image" src="./static/envelope-at-fill.svg" alt="email link"></a>
-                    <a href="./static/GrayBoulware_Resume&References.pdf"><input title="Download my rèsumè" class="icon mt-1" type="image" src="./static/file-text-fill.svg" alt="rèsumè link"></a>
-                </div>
-            </card>
-        </div>
-        <!-- this section will have the welcome message, my personal mission statement, another p tbd, and an array-powered daily fun fact or joke -->
-        <div class="main col-lg-8 ps-5 text-center">
-            <p class="border-bottom border-primary pb-2  text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore eaque laudantium consequatur iusto saepe vel consectetur praesentium, earum repudiandae adipisci corrupti voluptatem illum sit est! Voluptates ipsa nulla qui!</p>
-            <p class="border-bottom border-primary pb-2 text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore eaque laudantium consequatur iusto saepe vel consectetur praesentium, earum repudiandae adipisci corrupti voluptatem illum sit est! Voluptates ipsa nulla qui!</p>
-            <p class="border-bottom border-primary pb-2 text-wrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore eaque laudantium consequatur iusto saepe vel consectetur praesentium, earum repudiandae adipisci corrupti voluptatem illum sit est! Voluptates ipsa nulla qui!</p>
-            <br>
-            <div class="daily">
-                <p class=" text-primary fw-bold fs-4" for="prompt">Would you like to hear a joke or get a fun fact?</p>
-                <select name="choice" id="choice" onchange="(getFactOrJoke(this))" >
-                    <option value="select">Select. . .</option>
-                    <option value="fact">Fun fact please!</option>
-                    <option value="joke">Tell me a joke</option>
-                    <option value="nah">Not Today</option>
-                </select>
-                <!-- add button to confirm selection -->
-                <button class="bg-success text-white" type="submit" id="reveal" onclick="showFactOrJoke()">Show me!</button>
+    <div class="px-4 pb-3">
+        <div class="d-flex row">
+            <!-- the left side of this first row will hold my bio card -->
+            <div class="side col-lg-4">
+                <card class="card m-auto border-3" style="width: 18rem">
+                    <div class="bg-gray">
+                        <img class="headshot img-fluid" src="./static/babyphoto.png" alt="Gray Boulware Headshot">
+                    </div>
+                    <div class="bio bg-fafafa">
+                        <h3 class="text-decoration-underline text-center text-primary fw-bolder fs-4">Gray Boulware</h3>
+                        <p
+                            class="text-center text-center border-bottom border-3 text-secondary fs-small fst-italic fw-bold p-1">
+                            Product Manager | Software Engineer</p>
+                        <h4 class="text-decoration-underline text-center text-primary fw-bolder fs-4">Top Skills</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item active">Mickey Mouse Club Member</li>
+                            <li class="list-group-item">Coloring inside the lines</li>
+                            <li class="list-group-item active">Full Stack Lego Engineering</li>
+                            <li class="list-group-item">Driving the girls mad</li>
+                            <li class="list-group-item active">Eating all of my dinner</li>
+                            <li class="list-group-item disabled text-decoration-line-through">Wetting the bed</li>
+                        </ul>
+                    </div>
+                    <div class="icon-tray d-flex justify-content-around bg-primary align-items-center">
+                        <a href="https://github.com/MGBoulware88/"><input title="Follow me on gitHub" class="mt-1 icon"
+                                type="image" src="./static/github.svg" alt="gitHub link"></a>
+                        <a href="https://www.linkedin.com/in/gray-boulware-6538345b/"><input
+                                title="Connect with me on LinkedIn" class="icon mt-1" type="image"
+                                src="./static/linkedin.svg" alt="LinkedIn link"></a>
+                        <a title="Email me" href="mailto:gray.boulware@gmail.com"><input class="icon mt-1" type="image"
+                                src="./static/envelope-at-fill.svg" alt="email link"></a>
+                        <a href="./static/GrayBoulware_Resume&References.pdf"><input title="Download my rèsumè"
+                                class="icon mt-1" type="image" src="./static/file-text-fill.svg" alt="rèsumè link"></a>
+                    </div>
+                </card>
             </div>
-            <div class="row response text-center">
-                <div class="hidden" id="joke">
-                    <p class="setup">'setup text'</p>
-                    <!-- add something to hide punchline until user wants to reveal it -->
-                    <button type="button" onclick="revealPunchline()">Reveal Punchline</button>
-                    <p class="punchline hidden">'punchline text'</p>
-                </div>
-                <p class="hidden" id="fact">'fact'</p>
-                <p class="hidden" id="bummer">Maybe next time!</p>
-            </div>
-            <!-- <img class="img-fluid" src="./static/yifei-wong-UMnCZnDDGOU-unsplash.jpg" alt="cherry blossoms"> -->
-        </div>
-    </div>
-    <!-- headers for the next part instead of flex-column; I shouldn't need to style them differently, but I like leaving this as a separate row in case I change it to a diff content type and push the headers down a row in the future -->
-    <div class="row pt-3 text-center ">
-        <p class="col-4 text-start fst-italic">Check out this sunset!</p>
-        <h3 class="col-8 text-primary">My Projects! 🤠</h3>
-    </div>
-    <div class="row">
-        <!-- eye candy left column-->
-        <div class="col-lg-4 col-sm-4">
-            <img class="img-fluid" src="./static/wolfgang-hasselmann-B5Qb_KYDKDU-unsplash.jpg" alt="sunset over the ocean">
-        </div>
-        <!-- my projects highlight section -->
-        <div class="col-lg-8 col-sm-8 text-primary">
-            <p class="text-dark text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus culpa fugit, provident nesciunt aliquid porro quaerat nemo maxime facere consectetur repellat deleniti, dignissimos corporis laudantium cupiditate voluptas quae ipsa hic.</p>
-            <div class="d-flex align-items-center p-2">
-                <img class="project-icon" src="./static/pexels-christina-morillo-1181671.jpg" alt="python">
-                <div class="d-flex flex-column">
-                    <p class="text-start ps-4 fw-bold text-decoration-underline">Python Projects</p>
-                    <p class="text-center text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, odit! Excepturi fugiat doloribus voluptates sed!</p>
-                </div>
-            </div>
-            <div class="d-flex align-items-center p-2">
+            <!-- this section will have the welcome message, my personal mission statement, another p tbd, and an array-powered daily fun fact or joke -->
+            <div class="main pt-4 col-lg-8 text-center">
+                <h2>Hello!</h2>
+                <p class="border-bottom border-primary pb-2  text-wrap">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Esse labore eaque laudantium consequatur iusto saepe vel consectetur praesentium,
+                    earum repudiandae adipisci corrupti voluptatem illum sit est! Voluptates ipsa nulla qui!</p>
+                <p class="border-bottom border-primary pb-2 text-wrap">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Esse labore eaque laudantium consequatur iusto saepe vel consectetur praesentium,
+                    earum repudiandae adipisci corrupti voluptatem illum sit est! Voluptates ipsa nulla qui!</p>
+                <p class="border-bottom border-primary pb-2 text-wrap">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Esse labore eaque laudantium consequatur iusto saepe vel consectetur praesentium,
+                    earum repudiandae adipisci corrupti voluptatem illum sit est! Voluptates ipsa nulla qui!</p>
+                <img class="img-fluid d-flex my-3 github-commit" src="https://ghchart.rshah.org/0d6efd/mgboulware88">
+                <br>
+                <!-- use form tag -->
+                <form action="#" target="" class="daily bg-secondary text-light" id="daily">
+                    <p class="fw-bold fs-4" for="prompt">Would you like to hear a joke or get a fun fact?</p>
+                    <select name="selection" id="selection">
+                        <option value="select">Select One</option>
+                        <option value="joke">Joke</option>
+                        <option value="fact">Fact</option>
+                    </select>
+                    <button type="button" class="bg-primary text-light" onclick="getKey()">Confirm</button>
+                    <output class="row text-center text-light" id="container"></output>
+                </form>
                 
-                <img class="project-icon" src="./static/pexels-miguel-á-padriñán-1591061.jpg" alt="html">
-                <div class="d-flex flex-column">
-                    <p class="text-start ps-4 fw-bold text-decoration-underline">HTML5, CSS, JS Projects</p>
-                    <p class="text-center text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, odit! Excepturi fugiat doloribus voluptates sed!</p>
-                </div>
+                <!-- <img class="img-fluid" src="./static/yifei-wong-UMnCZnDDGOU-unsplash.jpg" alt="cherry blossoms"> -->
+            </div>
+        </div>
+        <!-- headers for the next part instead of flex-column; I shouldn't need to style them differently, but I like leaving this as a separate row in case I change it to a diff content type and push the headers down a row in the future -->
+        <div class="row pt-3 text-center px-4">
+            <p class="col-4 text-start fst-italic">Check out this sunset!</p>
+            <h3 class="col-8 text-primary">My Projects! 🤠</h3>
+        </div>
+        <div class="row px-4">
+            <!-- eye candy left column-->
+            <div class="col-lg-4 col-sm-4">
+                <img class="img-fluid" src="./static/wolfgang-hasselmann-B5Qb_KYDKDU-unsplash.jpg"
+                    alt="sunset over the ocean">
+            </div>
+            <!-- my projects highlight section -->
+            <div class="col-lg-8 col-sm-8 text-primary">
+                <p class="text-dark text-center">Here are some example of projects I have created or contributed to on gitHub</p>
+                <div class="project-container container-fluid d-flex align-items-center p-2"></div>
             </div>
         </div>
     </div>
+    <!-- Axios CDN for API -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js" integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- bootstrap's and my script.js for the daily fun fact array -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
