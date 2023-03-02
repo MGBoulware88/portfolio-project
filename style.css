@@ -38,7 +38,7 @@ a:hover {
 }
 
 .side .card {
-    border-radius: 85px;
+    background-color: transparent !important;
 }
 
 .hidden {
@@ -52,12 +52,15 @@ a:hover {
     box-shadow: 15px 16px 34px -6px rgba(0, 0, 0, 0.75);
 }
 
+
 .card p {
     color: black;
 }
 
 .icon-tray {
     padding: .5rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .lang-icons {
@@ -89,7 +92,7 @@ a:hover {
 }
 
 .headshot {
-    border-radius: 15%;
+    border-radius: 15px;
     /* height: 275px; */
 }
 
