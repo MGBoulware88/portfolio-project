@@ -282,14 +282,6 @@ a:hover {
     height: 250px;
 }
 
-.hi__base-plate {
-    width: 50%;
-    height: 50%;
-    margin: auto;
-    background: black;
-    border: 1px solid var(--grey);
-}
-
 .hi__location {
     position: absolute;
     margin: 0;
@@ -310,13 +302,6 @@ a:hover {
     transform: rotate(90deg) translateX(-10px);
 }
 
-.gsap-3-logo {
-    width: 20vw;
-    max-width: 150px;
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-}
 
 /*  ==========================================================
       Font Link
