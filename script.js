@@ -47,18 +47,16 @@ async function getJoke() {
           }
     });
     var jokeText = response.data.joke;
-    console.log(jokeText);
     return jokeText;
 }
 
 async function getFact() {
-    var response = await axios.get('https://fun-facts1.p.rapidapi.com/api/fun-facts',{
+    var response = await axios.get('https://api.api-ninjas.com/v1/facts?limit=1',{
         headers: {
-            'X-RapidAPI-Key': 'af62c2fa06mshf0b765ef4edb5a1p19978ejsn40af1ecfa88c',
-            'X-RapidAPI-Host': 'fun-facts1.p.rapidapi.com'
-          }
+            'X-Api-Key': 'NMGNlnLpB+44dYy8e0zpaA==jg3p2eZM2e3kygbW'
+        }
     });
-    var factText = response.data.fact;
+    var factText = response.data[0].fact;
     return factText;
 }
 
