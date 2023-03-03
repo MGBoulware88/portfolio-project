@@ -10,8 +10,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    align-content: center;
     text-align: center;
 }
 
