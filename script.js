@@ -2,7 +2,6 @@
     getProjects();
 })()
 
-const factArr = ["polar bears aren't actually white", "2nd fact", "3rd fact", "4th fact"];
 const textContainer = document.querySelector("#container");
 const project_container = document.querySelector(".project-container");
 
@@ -52,10 +51,15 @@ async function getJoke() {
     return jokeText;
 }
 
-function getFact() {
-    var randNum = Math.floor(Math.random() * factArr.length);
-    var yourFact = factArr[randNum];
-    return yourFact;
+async function getFact() {
+    var response = await axios.get('https://fun-facts1.p.rapidapi.com/api/fun-facts',{
+        headers: {
+            'X-RapidAPI-Key': 'af62c2fa06mshf0b765ef4edb5a1p19978ejsn40af1ecfa88c',
+            'X-RapidAPI-Host': 'fun-facts1.p.rapidapi.com'
+          }
+    });
+    var factText = response.data.fact;
+    return factText;
 }
 
 async function getProjects() {
