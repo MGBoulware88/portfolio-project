@@ -75,7 +75,7 @@ async function getProjects() {
 
 function populate(name, pushed_at, repo, languages) {
     var card = document.createElement("div");
-    card.classList.add("card","shadow","rounded");
+    card.classList.add("card");
 
     addLanguages(languages, card);
 
