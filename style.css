@@ -29,7 +29,13 @@ a:hover {
 
 .daily {
     border-radius: 15px;
-    height: 12rem;
+    height: 15rem;
+    padding: 1.5rem;
+}
+
+select {
+    height: 2.5rem;
+    width: 10rem;
 }
 
 .side {
