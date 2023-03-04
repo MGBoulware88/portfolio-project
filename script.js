@@ -323,47 +323,14 @@ window.setInterval(function(){
   rotate()
 }, 4000);
 
-const industry = ["Sports", "Fashion", "Art", "Gaming", "Event", "Cooking", "Lifestyle", "Pet", "Technology", "Travel", "Weather"];
-
-const websiteTypes = ["E-commerce", "Personal Blog", "Portfolio", "Social network", "News", "Membership", "Nonprofit", "Forum", "Educational", "Dashboard"];
-
-const components = {
-  button: ["Add to cart", "Subscribe", "Share", "Download", "Buy now"],
-  form: ["Contact", "Search", "Registration", "Login", "Feedback"],
-  slider: ["Image carousel", "Product", "Testimonial", "Banner", "Price range"],
-  modal: ["Newsletter signup", "Video player", "Image gallery", "Popup notification", "Product details"],
-  menu: ["Dropdown", "Mega", "Hamburger", "Tab"],
-  card: ["Product", "Callout", "Post"]
-};
-
+const projects = ["Building a Discord bot","Build a crypto application", "Building a 2D Game", "Build a website that displays all free software available for software engineers", "Automating tasks with Python", "Building an accelerated/self-paced online education platform", "Implement Flask in portfolio website", "Build websites with APIs", "Build an e-commerce website using React and Typescript", "Create a mock Spotify application", "Build a website that combines all streaming services available"];
 
 function generateIdea() {
   // Get a random topic area
-  const randomTopic= industry[Math.floor(Math.random() * industry.length)];
-  
-  // Get a random website type
-  const randomWebsiteType = websiteTypes[Math.floor(Math.random() * websiteTypes.length)];
+  const randomProject= projects[Math.floor(Math.random() * projects.length)];
 
-  // Get a random component
-  const componentKeys = Object.keys(components);
-  const randomComponent = componentKeys[Math.floor(Math.random() * componentKeys.length)];
-  
-  // Get a random idea from the chosen component
-  const ideas = components[randomComponent];
-  const randomIdea = ideas[Math.floor(Math.random() * ideas.length)];
-  
-  // Get a random color theme
-  
-  // Color list
-  
-  
-  // Text
-  document.querySelector('.topic').innerText = randomTopic;
-  document.querySelector('.type').innerText = randomWebsiteType;
-  document.querySelector('.text').innerText = randomIdea;
-  document.querySelector('.component').innerText = randomComponent;
+  document.querySelector('.idea').innerText = randomProject;
 }
-
 
 document.querySelector('.refresh').addEventListener('click', () => { generateIdea() });
 

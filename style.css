@@ -637,3 +637,11 @@ select {
     height: max-content;
     padding: 1rem;
 }
+
+.results .idea {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
