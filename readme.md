@@ -23,7 +23,7 @@ Third Upload Date: 2 Mar '23 {
 
 # Project Contributors
 
-Tina the Tiger Huynh  - https://github.com/tmchuynh
+Tina My Huynh  - https://github.com/tmchuynh
 
 Christian Land - https://github.com/ChristianMLand
 
