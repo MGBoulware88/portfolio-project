@@ -10,6 +10,7 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://codepen.io/GreenSock/pen/JGaKdQ.css" rel="stylesheet">
     <link rel="stylesheet" href="ani.css">
     <link rel="stylesheet" href="style.css">
@@ -65,6 +66,12 @@
             </div>
             <!-- this section will have the welcome message, my personal mission statement, another p tbd, and an array-powered daily fun fact or joke -->
             <div class="main pt-4 col-lg-8 text-center">
+                <div class="icons">
+                    <i class="fa fa-apple" id="apple"></i>
+                    <i class="fa fa-twitter" id="twitter"></i>
+                    <i class="fa fa-github-square github" id="github"></i>
+                    <i class="fa fa-facebook-square" id="facebook"></i>
+                  </div>
                 <h2 class="border-bottom border-primary pb-4 text-black text-wrap ts">Howdy, I'm Gray. Welcome to my
                     portfolio
                     site!</h2>
@@ -99,7 +106,6 @@
                             <h1>PROJECTS IN THE WORKS</h1>
                             <div class="results">
                                 <p class="idea">
-                    
                                 </p>
                             </div>
                             <a href="#idea" class="refresh text-center">
@@ -173,24 +179,26 @@
             </div>
         </section>
         <section class="d-flex container-fluid justify-content-center p-3">
-            <section class="counters">
-                <div class="container">
-                    <div>
-                        <div class="counter" data-target="60000">0</div>
-                        <h3>Hours Studying</h3>
-                    </div>
-                    <div>
-                        <div class="counter" data-target="15000">0</div>
-                        <h3>Hours Coding</h3>
-                    </div>
-                    <div>
-                        <div class="counter" data-target="150">0</div>
-                        <h3>Connections Made</h3>
-                    </div>
-                    <div>
-                        <div class="counter" data-target="550">0</div>
-                        <h3>Skills Achieved</h3>
-                    </div>
+            <section id="purecounter-section" class="counters d-flex justify-content-center text-center">
+                <div class="col-xs-12 col-sm-3 col-md-3 counter">
+                    <i class="bi-credit-card-2-front-fill"></i>
+                    <h2 class="count-title"><span id="percent" data-purecounter-start="0" data-purecounter-end="100"
+                            class="purecounter">0</span></h2>
+                    <p class="count-text">Secure Transations</p>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3 counter">
+                    <i class="bi-heart-fill"></i>
+                    <h2 class="count-title"><span data-purecounter-start="0" data-purecounter-end="9742"
+                            class="purecounter">0</span></h2>
+                    <p class="count-text">Happy Clients</p>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3 counter">
+                    <i class="bi-key-fill"></i>
+                    <h2 class="count-title"><span data-purecounter-start="0" data-purecounter-end="10458"
+                            class="purecounter">0</span></h2>
+                    <p class="count-text">Closed Deals</p>
                 </div>
             </section>
 
@@ -229,6 +237,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
         integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+    <script>
+        const pure = new PureCounter({
+            selector: '.counter',
+            once: false,
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 

@@ -1,4 +1,4 @@
-(function() {
+(function () {
     getProjects();
 })()
 
@@ -24,7 +24,7 @@ async function addHTML(key) {
     }
     if (userOptions.hasOwnProperty(key)) {
         createHTML(await userOptions[key]());
-    }  
+    }
 }
 
 function createHTML(text) {
@@ -34,24 +34,24 @@ function createHTML(text) {
 }
 
 async function getJoke() {
-    var response = await axios.get('https://jokeapi-v2.p.rapidapi.com/joke/Any',{
+    var response = await axios.get('https://jokeapi-v2.p.rapidapi.com/joke/Any', {
         params: {
             type: 'single',
             format: 'json',
             idRange: '0-319',
             blacklistFlags: 'nsfw,racist,religious,political,sexist,explicit'
-          },
-          headers: {
+        },
+        headers: {
             'X-RapidAPI-Key': 'af62c2fa06mshf0b765ef4edb5a1p19978ejsn40af1ecfa88c',
             'X-RapidAPI-Host': 'jokeapi-v2.p.rapidapi.com'
-          }
+        }
     });
     var jokeText = response.data.joke;
     return jokeText;
 }
 
 async function getFact() {
-    var response = await axios.get('https://api.api-ninjas.com/v1/facts?limit=1',{
+    var response = await axios.get('https://api.api-ninjas.com/v1/facts?limit=1', {
         headers: {
             'X-Api-Key': 'NMGNlnLpB+44dYy8e0zpaA==jg3p2eZM2e3kygbW'
         }
@@ -62,17 +62,17 @@ async function getFact() {
 
 async function getProjects() {
     $.getJSON("https://api.github.com/users/mgboulware88/repos?per_page=53", function (data) {
-    data.forEach(function (repo) {
-        // $.getJSON(repo.languages_url, function (languages) {
-        //     populate(repo.name, repo.pushed_at, repo, Object.keys(languages));
-        // })
-        if (repo.topics.length > 0) {
-            $.getJSON(repo.languages_url, function (languages) {
-                populate(repo.name, repo.pushed_at, repo, Object.keys(languages));
-            })
-        }
+        data.forEach(function (repo) {
+            // $.getJSON(repo.languages_url, function (languages) {
+            //     populate(repo.name, repo.pushed_at, repo, Object.keys(languages));
+            // })
+            if (repo.topics.length > 0) {
+                $.getJSON(repo.languages_url, function (languages) {
+                    populate(repo.name, repo.pushed_at, repo, Object.keys(languages));
+                })
+            }
+        });
     });
-});
 }
 
 function populate(name, pushed_at, repo, languages) {
@@ -121,7 +121,7 @@ function addLanguages(languages, card) {
     if (languages.length == 0) {
         icon.innerHTML = "";
     }
-  
+
     if (languages.includes("HTML")) {
         var icon2 = document.createElement("i");
         icon2.classList.add("bx");
@@ -179,17 +179,17 @@ const cuboid = selectAll('.cuboid');
 const hiWords = selectAll('.threed-word');
 let winW = 0;
 let winH = 0;
-let pointer = { 
-	x: window.innerWidth / 2, 
-	y: window.innerHeight / 2 
+let pointer = {
+    x: window.innerWidth / 2,
+    y: window.innerHeight / 2
 };
 
 function init() {
-    
+
     setWinDimensions();
 
     gsap.set(container, { autoAlpha: 1 });
-    
+
     gsap.timeline({ delay: 0.5 })
         .from('.threed-location-lat', {
             x: 100,
@@ -209,24 +209,24 @@ function init() {
             stagger: 0.14,
             ease: 'elastic(0.4,0.3)'
         }, 0);
-    
-    gsap.to(cuboid, { 
-        rotateX: -360, 
-        duration: 8, 
-        repeat: -1, 
-        ease: 'none' 
+
+    gsap.to(cuboid, {
+        rotateX: -360,
+        duration: 8,
+        repeat: -1,
+        ease: 'none'
     });
-    
-    gsap.fromTo(cuboid, { 
-        rotateY: 8, 
-        rotate: -10 
-    },{ 
-        rotateY: -8, 
+
+    gsap.fromTo(cuboid, {
+        rotateY: 8,
+        rotate: -10
+    }, {
+        rotateY: -8,
         rotate: 10,
-        duration: 2.2, 
-        yoyo: true, 
-        repeat: -1, 
-        ease: 'sine.inOut' 
+        duration: 2.2,
+        yoyo: true,
+        repeat: -1,
+        ease: 'sine.inOut'
     });
 }
 
@@ -236,97 +236,103 @@ function setWinDimensions() {
 }
 
 function calcOffset(xPos, yPos) {
-	let dX = 2*(xPos - winW/2)/winW;
-	let dY = -2*(yPos - winH/2)/winH;
-	return [dX,dY];
+    let dX = 2 * (xPos - winW / 2) / winW;
+    let dY = -2 * (yPos - winH / 2) / winH;
+    return [dX, dY];
 }
 
 function followPointer(pX, pY) {
     let nPos = calcOffset(pX, pY); // get cursor position from center
     let nX = nPos[0];
-	let nY = nPos[1];
-    let positiveX = Math.sqrt(nX*nX);
-	let positiveY = Math.sqrt(nY*nY);
-    let deltaS = 450*positiveX;
-    let deltaW = 600*positiveY;
-	gsap.to(hiWords, {
-		fontStretch: `${(550-deltaS)}%`,
-        fontWeight: 800-deltaW,
-		duration: 2
-	});
+    let nY = nPos[1];
+    let positiveX = Math.sqrt(nX * nX);
+    let positiveY = Math.sqrt(nY * nY);
+    let deltaS = 450 * positiveX;
+    let deltaW = 600 * positiveY;
+    gsap.to(hiWords, {
+        fontStretch: `${(550 - deltaS)}%`,
+        fontWeight: 800 - deltaW,
+        duration: 2
+    });
 }
 
-window.addEventListener("mousemove", function(event) {
-	pointer.x = event.clientX;
-	pointer.y = event.clientY;
-	followPointer(pointer.x, pointer.y);
+window.addEventListener("mousemove", function (event) {
+    pointer.x = event.clientX;
+    pointer.y = event.clientY;
+    followPointer(pointer.x, pointer.y);
 });
 
-window.addEventListener('touchmove', function(event) {
- 	pointer.x = event.touches[0].clientX;
-  	pointer.y = event.touches[0].clientY;
-	followPointer(pointer.x, pointer.y);
+window.addEventListener('touchmove', function (event) {
+    pointer.x = event.touches[0].clientX;
+    pointer.y = event.touches[0].clientY;
+    followPointer(pointer.x, pointer.y);
 });
 
-window.addEventListener('touchstart', function(event) {
- 	pointer.x = event.touches[0].clientX;
-  	pointer.y = event.touches[0].clientY;
-	followPointer(pointer.x, pointer.y);
+window.addEventListener('touchstart', function (event) {
+    pointer.x = event.touches[0].clientX;
+    pointer.y = event.touches[0].clientY;
+    followPointer(pointer.x, pointer.y);
 });
 
 window.onload = () => {
-	init();
+    init();
 };
+
+window.addEventListener('onscroll', function () {
+    if (window.scrollY > 230) {
+        updateCount();
+    }
+})
 
 window.onresize = setWinDimensions;
 const counters = document.querySelectorAll('.counter');
 const speed = 200; // The lower the slower
 
 counters.forEach(counter => {
-	const updateCount = () => {
-		const target = +counter.getAttribute('data-target');
-		const count = +counter.innerText;
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
 
-		// Lower inc to slow and higher to slow
-		const inc = target / speed;
+        // Lower inc to slow and higher to slow
+        const inc = target / speed;
 
-		// console.log(inc);
-		// console.log(count);
+        // console.log(inc);
+        // console.log(count);
 
-		// Check if target is reached
-		if (count < target) {
-			// Add inc to count and output in counter
-			counter.innerText = count + inc;
-			// Call function every ms
-			setTimeout(updateCount, 1);
-		} else {
-			counter.innerText = target;
-		}
-	};
+        // Check if target is reached
+        if (count < target) {
+            // Add inc to count and output in counter
+            counter.innerText = count + inc;
+            // Call function every ms
+            setTimeout(updateCount, 1);
+        } else {
+            counter.innerText = target;
+        }
+    };
 
-	updateCount();
+    updateCount();
 });
 
 function rotate() {
-  var lastChild = $('.slider div:last-child').clone();
-  /*$('#test').html(lastChild)*/
-  $('.slider div').removeClass('firstSlide')
-  $('.slider div:last-child').remove();
-  $('.slider').prepend(lastChild)
-  $(lastChild).addClass('firstSlide')
+    var lastChild = $('.slider div:last-child').clone();
+    /*$('#test').html(lastChild)*/
+    $('.slider div').removeClass('firstSlide')
+    $('.slider div:last-child').remove();
+    $('.slider').prepend(lastChild)
+    $(lastChild).addClass('firstSlide')
 }
 
-window.setInterval(function(){
-  rotate()
+window.setInterval(function () {
+    rotate()
 }, 4000);
 
-const projects = ["Building a Discord bot","Build a crypto application", "Building a 2D Game", "Build a website that displays all free software available for software engineers", "Automating tasks with Python", "Building an accelerated/self-paced online education platform", "Implement Flask in portfolio website", "Build websites with APIs", "Build an e-commerce website using React and Typescript", "Create a mock Spotify application", "Build a website that combines all streaming services available"];
+const projects = ["Building a Discord bot", "Build a crypto application", "Building a 2D Game", "Build a website that displays all free software available for software engineers", "Automating tasks with Python", "Building an accelerated/self-paced online education platform", "Implement Flask in portfolio website", "Build websites with APIs", "Build an e-commerce website using React and Typescript", "Create a mock Spotify application", "Build a website that combines all streaming services available"];
 
 function generateIdea() {
-  // Get a random topic area
-  const randomProject= projects[Math.floor(Math.random() * projects.length)];
+    // Get a random topic area
+    const randomProject = projects[Math.floor(Math.random() * projects.length)];
 
-  document.querySelector('.idea').innerText = randomProject;
+    document.querySelector('.idea').innerText = randomProject;
 }
 
 document.querySelector('.refresh').addEventListener('click', () => { generateIdea() });
