@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 @media (max-width: 700px) {
     .counters .container {
         grid-template-columns: repeat(2, 1fr);
@@ -15,9 +16,11 @@
     --grey: #5E5D5E;
     --mid-grey: #3f3f3f;
 }
+
 body {
     background-color: rgb(33, 37, 41);
 }
+
 .navbar {
     margin: 0;
     width: 100%;
@@ -31,37 +34,41 @@ body {
 #twitter,
 #github,
 #facebook {
-  font-size: 4rem;
-  background-color: #18191f;
-  color: #fff;
-  box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
-    2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
-    inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
-    inset 2px 2px 10px #00000080;
-  border-radius: 29px;
-  padding: 11px 19px;
-  margin: 0 40px;
-  animation: animate 3s linear infinite;
-  text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
-    0 0 200px #0072ff;
+    font-size: 4rem;
+    background-color: #18191f;
+    color: #fff;
+    box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
+        2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
+        inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
+        inset 2px 2px 10px #00000080;
+    border-radius: 29px;
+    padding: 11px 19px;
+    margin: 0 40px;
+    animation: animate 3s linear infinite;
+    text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
+        0 0 200px #0072ff;
 }
+
 #twitter {
-  animation-delay: 0.3s;
+    animation-delay: 0.3s;
 }
+
 #facebook {
-  animation-delay: 0.7s;
+    animation-delay: 0.7s;
 }
+
 #github {
-  animation-delay: 0.1s;
+    animation-delay: 0.1s;
 }
 
 @keyframes animate {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  to {
-    filter: hue-rotate(360deg);
-  }
+    from {
+        filter: hue-rotate(0deg);
+    }
+
+    to {
+        filter: hue-rotate(360deg);
+    }
 }
 
 
@@ -74,88 +81,112 @@ body {
     align-content: center;
     text-align: center;
 }
+
 a {
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 .card {
     width: 13rem;
 }
+
 .daily {
     border-radius: 15px;
     height: 15rem;
     padding: 1.5rem;
 }
+
 select {
     height: 2.5rem;
     width: 10rem;
 }
+
 .side {
     background-color: transparent !important;
 }
+
 .side .card {
     background-color: transparent !important;
 }
+
 .hidden {
     display: none;
 }
+
 .card {
     border-radius: 15px;
     -webkit-box-shadow: 15px 16px 34px -6px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 15px 16px 34px -6px rgba(0, 0, 0, 0.75);
     box-shadow: 15px 16px 34px -6px rgba(0, 0, 0, 0.75);
 }
+
 .card p {
     color: black;
 }
+
 .icon-tray {
     padding: .5rem;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+
 .lang-icons {
     display: flex;
     text-align: center;
     justify-content: center;
     margin: 1rem;
 }
+
 .lang-icons .bx {
     font-size: 2rem;
 }
+
 .html {
     color: #e34c27;
 }
+
 .css {
     color: #4266f5;
 }
+
 .javascript {
     color: #f0d44c;
 }
+
 .python {
     color: #346e9e;
 }
+
 .java {
     color: #f7971a;
 }
+
 .github-commit {
     text-align: center;
     margin: auto;
 }
+
 .headshot {
     border-radius: 15px;
     /* height: 275px; */
 }
+
 .fs-small {
     font-size: 11pt;
 }
+
 .icon {
     height: 20px;
 }
+
 .project-icon {
     height: 100px;
 }
+
 .bg-fafafa {
     background-color: #fafafa;
 }
