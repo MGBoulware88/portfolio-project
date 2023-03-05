@@ -171,15 +171,12 @@ function toTitleCase(str) {
     );
 }
 
-console.clear();
-
 select = e => document.querySelector(e);
 selectAll = e => document.querySelectorAll(e);
 
 const container = select('.container');
-const cuboid = selectAll('.hi__cuboid');
-const hiWords = selectAll('.hi__word');
-const base = select('.hi__base-plate');
+const cuboid = selectAll('.cuboid');
+const hiWords = selectAll('.threed-word');
 let winW = 0;
 let winH = 0;
 let pointer = { 
@@ -194,13 +191,13 @@ function init() {
     gsap.set(container, { autoAlpha: 1 });
     
     gsap.timeline({ delay: 0.5 })
-        .from('.hi__location--lat', {
+        .from('.threed-location-lat', {
             x: 100,
             autoAlpha: 0,
             ease: 'power4',
             duration: 1
         })
-        .from('.hi__location--long', {
+        .from('.threed-location-long', {
             x: -100,
             autoAlpha: 0,
             ease: 'power4',

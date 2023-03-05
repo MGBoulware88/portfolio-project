@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://codepen.io/GreenSock/pen/JGaKdQ.css" rel="stylesheet">
+    <link rel="stylesheet" href="ani.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <!-- pad the body slightly more on the x-axis -->
@@ -19,7 +20,7 @@
     <nav class="navbar row container-fluid bg-dark text-light">
         <h1 class="typewriter">Hello and Welcome!</h1>
     </nav>
-    <main class="px-4 pb-3">
+    <main class="p-4">
         <section class="d-flex row">
             <!-- the left side of this first row will hold my bio card -->
             <div class="side col-lg-4 pt-2">
@@ -93,65 +94,66 @@
                             <output class="row text-center text-light" id="container"></output>
                         </form>
                     </div>
-                    <div class="col-6 m-auto idea-container">
+                    <div class="col-6 m-auto idea-container justify-content-between">
                         <div class="idea-generator d-flex flex-column">
                             <h1>PROJECTS IN THE WORKS</h1>
-
                             <div class="results">
                                 <p class="idea">
-                                    
+                    
                                 </p>
                             </div>
-                            <button class="refresh">Refresh</button>
-                        </div>
+                            <a href="#idea" class="refresh text-center">
+                                <span></span><span></span><span></span><span></span>Next
+                            </a>
+                        </div>        
                     </div>
                 </section>
             </div>
         </section>
-        <section class="d-flex">
+        <section class="d-flex flex-wrap">
             <div class="col-4 text-center pt-4">
-                <div class="container threed-container">
-                    <div class="hi">
-                        <div class="hi__cuboid">
-                            <div class="face face--front">
-                                <p class="hi__word">More</p>
+                <div class="container threed-container p-3">
+                    <div class="threed">
+                        <div class="cuboid">
+                            <div class="face face-front">
+                                <p class="threed-word">More</p>
                             </div>
-                            <div class="face face--back">
-                                <p class="hi__word">More</p>
+                            <div class="face face-back">
+                                <p class="threed-word">More</p>
                             </div>
-                            <div class="face face--top">
-                                <p class="hi__word">More</p>
+                            <div class="face face-top">
+                                <p class="threed-word">More</p>
                             </div>
-                            <div class="face face--bottom">
-                                <p class="hi__word">More</p>
-                            </div>
-                        </div>
-                        <div class="hi__cuboid">
-                            <div class="face face--front">
-                                <p class="hi__word">Projects</p>
-                            </div>
-                            <div class="face face--back">
-                                <p class="hi__word">Projects</p>
-                            </div>
-                            <div class="face face--top">
-                                <p class="hi__word">Projects</p>
-                            </div>
-                            <div class="face face--bottom">
-                                <p class="hi__word">Projects</p>
+                            <div class="face face-bottom">
+                                <p class="threed-word">More</p>
                             </div>
                         </div>
-                        <div class="hi__cuboid">
-                            <div class="face face--front">
-                                <p class="hi__word">To Come</p>
+                        <div class="cuboid">
+                            <div class="face face-front">
+                                <p class="threed-word">Projects</p>
                             </div>
-                            <div class="face face--back">
-                                <p class="hi__word">To Come</p>
+                            <div class="face face-back">
+                                <p class="threed-word">Projects</p>
                             </div>
-                            <div class="face face--top">
-                                <p class="hi__word">To Come</p>
+                            <div class="face face-top">
+                                <p class="threed-word">Projects</p>
                             </div>
-                            <div class="face face--bottom">
-                                <p class="hi__word">To Come</p>
+                            <div class="face face-bottom">
+                                <p class="threed-word">Projects</p>
+                            </div>
+                        </div>
+                        <div class="cuboid">
+                            <div class="face face-front">
+                                <p class="threed-word">To Come</p>
+                            </div>
+                            <div class="face face-back">
+                                <p class="threed-word">To Come</p>
+                            </div>
+                            <div class="face face-top">
+                                <p class="threed-word">To Come</p>
+                            </div>
+                            <div class="face face-bottom">
+                                <p class="threed-word">To Come</p>
                             </div>
                         </div>
 
