@@ -1,24 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-@media (max-width: 700px) {
-    .counters .container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .counters .container>div:nth-of-type(1),
-    .counters .container>div:nth-of-type(2) {
-        border-bottom: 1px lightskyblue solid;
-        padding-bottom: 20px;
-    }
-}
-
 :root {
     --grey: #5E5D5E;
     --mid-grey: #3f3f3f;
 }
 
 body {
-    background-color: rgb(33, 37, 41);
+    background-color: rgb(27, 30, 32);
 }
 
 .navbar {
@@ -27,7 +15,7 @@ body {
 }
 
 .icons {
-    height: 4rem;
+    height: 6rem;
 }
 
 #apple,
@@ -626,7 +614,6 @@ select {
 .idea-container h1 {
     font-size: 1rem;
     display: inline-block;
-    background: linear-gradient(-45deg, violet, deeppink, orange);
     margin: 2rem 0 -1rem -1rem;
     border: var(--border);
     padding: 1rem;
@@ -696,4 +683,17 @@ select {
     display: table;
     color: red;
     font-size: 3rem;
+}
+
+
+@media (max-width: 700px) {
+    .counters .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .counters .container>div:nth-of-type(1),
+    .counters .container>div:nth-of-type(2) {
+        border-bottom: 1px lightskyblue solid;
+        padding-bottom: 20px;
+    }
 }
