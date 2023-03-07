@@ -4,16 +4,16 @@
     --grey: #5E5D5E;
     --mid-grey: #3f3f3f;
 }
+
 body {
-    background-color: rgb(17, 17, 17);
+    background-color: #1f2020;
     background-size: 40px 40px;
-    background-image:
-      linear-gradient(to right, rgb(211, 202, 202) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(219, 215, 215) 1px, transparent 1px);
+    position: relative;
 }
 
 .borders {
     border-radius: 15px;
+    z-index: 2;
 }
 
 .text-black {
