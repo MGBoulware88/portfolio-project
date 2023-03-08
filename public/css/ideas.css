@@ -15,6 +15,8 @@
     height: fit-content;
     box-shadow: 0 0 40px -10px silver;
     z-index: 1;
+    backdrop-filter: blur(1vw);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .idea-container h1 {
@@ -46,6 +48,7 @@
     color: black;
     text-align: center;
     justify-content: center;
+    
 }
 
 .idea-container a:hover {

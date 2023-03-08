@@ -43,6 +43,13 @@ a:hover {
     text-decoration: underline;
 }
 
+.content-section {
+    backdrop-filter: blur(1vw);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: black;
+    font-weight: bold;
+}
+
 .card {
     width: 13rem;
 }
@@ -51,6 +58,8 @@ a:hover {
     border-radius: 15px;
     height: 15rem;
     padding: 1.5rem;
+    backdrop-filter: blur(1vw);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 select {
