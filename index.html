@@ -19,18 +19,21 @@
     <link rel="stylesheet" href="public/css/ideas.css">
     <link rel="stylesheet" href="public/css/projects.css">
     <link rel="stylesheet" href="public/css/background.css">
+    <link rel="stylesheet" href="public/css/collaborators.css">
 
 </head>
 <!-- pad the body slightly more on the x-axis -->
 
 <body>
+    <!-- BACKGROUND IMAGE -->
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/221808/sky.jpg" alt="background" class="background-image">
+    <!-- NAV BAR -->
     <nav class="navbar row container-fluid bg-dark text-light">
         <h1 class="typewriter">Hello and Welcome!</h1>
     </nav>
     <main class="p-4">
         <section class="d-flex row">
-            <!-- the left side of this first row will hold my bio card -->
+            <!-- BIO CARD -->
             <div class="side col-lg-4 pt-2">
                 <card class="card m-auto border-3" style="width: 18rem">
                     <div class="">
@@ -68,18 +71,21 @@
                             href="./static/GrayBoulware_Resume&References.pdf"><input title="Download my rèsumè"
                                 class="icon mt-1" type="image" src="./static/file-text-fill.svg" alt="rèsumè link"></a>
                     </div>
-
                 </card>
             </div>
+            <!-- END OF BIO CARD -->
             <!-- this section will have the welcome message, my personal mission statement, another p tbd, and an array-powered daily fun fact or joke -->
             <div class="main pt-4 col-lg-8 text-center">
+                <!-- GLOWING ICONS -->
                 <div class="icons">
                     <i class="fa fa-apple" id="apple"></i>
                     <i class="fa fa-twitter" id="twitter"></i>
                     <i class="fa fa-github-square github" id="github"></i>
                     <i class="fa fa-facebook-square" id="facebook"></i>
                 </div>
+                <!-- END OF GLOWING ICONS -->
                 <div class="bg-white borders p-3">
+                    <!-- INTRO CONTENT -->
                     <h2 class="border-bottom border-primary pb-4 text-black text-wrap ts">Howdy, I'm Gray. Welcome to my
                         portfolio
                         site!</h2>
@@ -93,13 +99,17 @@
                         engineer. I
                         have spent most of my product career in the healthcare industry, but also have experience in the
                         real estate industry.</p>
+                    <!-- END OF INTRO CONTENT -->
+                    <!-- GITHUB CHART -->
                     <img name="githubchart" class="img-fluid d-flex my-3 github-commit pt-2 mb-0"
                         src="https://ghchart.rshah.org/0d6efd/mgboulware88">
                     <label class="fst-italic fs-small mb-5 mt-0" for="githubchart">My gitHub Uploads chart</label>
+                    <!-- END OF GITHUB CHART -->
                 </div>
 
                 <br>
                 <section class="d-flex flex-md-row flex-sm-column justify-content-center interactive">
+                    <!-- JOKES GENERATOR -->
                     <div class="col-6 m-auto">
                         <form action="#" target="" class="daily bg-secondary text-light px-2" id="daily">
                             <p class="fw-bold fs-4" for="prompt">Would you like to hear a joke or get a fun fact?</p>
@@ -112,6 +122,8 @@
                             <output class="row text-center text-light" id="container"></output>
                         </form>
                     </div>
+                    <!-- END OF JOKES GENERATOR -->
+                    <!-- IDEA CONTAINER -->
                     <div class="col-6 m-auto idea-container justify-content-center">
                         <div class="idea-generator d-flex flex-column">
                             <h1>PROJECTS IN THE WORKS</h1>
@@ -124,10 +136,12 @@
                             </a>
                         </div>
                     </div>
+                    <!-- END OF IDEA CONTAINER -->
                 </section>
             </div>
         </section>
         <section class="d-flex flex-wrap">
+            <!-- MORE PROJECTS TO COME -->
             <div class="col-4 text-center pt-4">
                 <div class="container threed-container p-3">
                     <div class="threed">
@@ -173,10 +187,11 @@
                                 <p class="threed-word">To Come</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
+            <!-- END OF MORE PROJECTS TO COME -->
+            <!-- PROJECTS FROM GITHUB -->
             <div class="col-8 px-4 d-flex justify-content-around">
                 <!-- eye candy left column-->
 
@@ -188,7 +203,71 @@
                     <div class="project-container container-fluid d-flex align-items-center p-2"></div>
                 </div>
             </div>
+            <!-- END OF PROJECTS FROM GITHUB -->
         </section>
+
+        <div id="app">
+            <h2>Collaborators</h2>
+            <div id="profiles">
+                <div class="profile">
+                    <div class="profile-content">
+                        <div class="profile-pic">
+                            <img class="profile-pic-image"
+                                src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500" />
+                        </div>
+                        <h3 class="profile-name"><a href="#">ANDY</a></h3>
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="profile-content">
+                        <div class="profile-pic">
+                            <img class="profile-pic-image"
+                                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500" />
+                        </div>
+                        <h3 class="profile-name"><a href="#">OLIVIA</a></h3>
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="profile-content">
+                        <div class="profile-pic">
+                            <img class="profile-pic-image"
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500" />
+                        </div>
+                        <h3 class="profile-name"><a href="#">NOAH</a></h3>
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="profile-content">
+                        <div class="profile-pic">
+                            <img class="profile-pic-image"
+                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500" />
+                        </div>
+                        <h3 class="profile-name"><a href="#">EMMA</a></h3>
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="profile-content">
+                        <div class="profile-pic">
+                            <img class="profile-pic-image"
+                                src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500" />
+                        </div>
+                        <h3 class="profile-name"><a href="#">MIKE</a></h3>
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="profile-content">
+                        <div class="profile-pic">
+                            <img class="profile-pic-image"
+                                src="https://images.unsplash.com/photo-1512663150964-d8f43c899f76?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ3fHxwZW9wbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500" />
+                        </div>
+                        <h3 class="profile-name"><a href="#">HENRY</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- PURE COUNTER -->
         <section class="d-flex container-fluid justify-content-center p-3">
             <section id="purecounter-section" class="counters d-flex justify-content-center text-center">
                 <div class="col-xs-12 col-sm-3 col-md-3 counter">
@@ -214,6 +293,8 @@
             </section>
 
         </section>
+        <!-- END OF PURE COUNTER -->
+        <!-- BACKGROUND ANIMATION -->
         <section class="circles-section">
             <div class="circle-container">
                 <div class="circle"></div>
@@ -516,6 +597,8 @@
                 <div class="circle"></div>
             </div>
         </section>
+        <!-- END OF BACKGROUND ANIMATION -->
+        <!-- IMAGE SLIDER SECTION -->
         <section class="container-fluid d-flex justify-content-center">
             <div class="slider-container">
                 <div class="slider">
@@ -536,7 +619,8 @@
                 </div>
             </div>
         </section>
-        
+        <!-- END OF IMAGE SLIDER SECTION -->
+
     </main>
     <!-- Axios CDN for API -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"
