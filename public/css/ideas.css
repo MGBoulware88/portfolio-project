@@ -12,7 +12,7 @@
     letter-spacing: 1px;
     align-self: end;
     background: white;
-    color: black;
+    height: fit-content;
     box-shadow: 0 0 40px -10px silver;
     z-index: 1;
 }
