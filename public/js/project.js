@@ -5,21 +5,6 @@
 const project_container = document.querySelector(".project-container");
 
 
-async function getProjects() {
-    $.getJSON("https://api.github.com/users/mgboulware88/repos?per_page=53", function (data) {
-        data.forEach(function (repo) {
-            // $.getJSON(repo.languages_url, function (languages) {
-            //     populate(repo.name, repo.pushed_at, repo, Object.keys(languages));
-            // })
-            if (repo.topics.length > 0) {
-                $.getJSON(repo.languages_url, function (languages) {
-                    populate(repo.name, repo.pushed_at, repo, Object.keys(languages));
-                })
-            }
-        });
-    });
-}
-
 function populate(name, pushed_at, repo, languages) {
     var card = document.createElement("div");
     card.classList.add("card");

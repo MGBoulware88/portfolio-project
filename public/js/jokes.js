@@ -48,3 +48,18 @@ async function getFact() {
     var factText = response.data[0].fact;
     return factText;
 }
+
+async function getProjects() {
+    $.getJSON("https://api.github.com/users/mgboulware88/repos?per_page=53", function (data) {
+        data.forEach(function (repo) {
+            // $.getJSON(repo.languages_url, function (languages) {
+            //     populate(repo.name, repo.pushed_at, repo, Object.keys(languages));
+            // })
+            if (repo.topics.length > 0) {
+                $.getJSON(repo.languages_url, function (languages) {
+                    populate(repo.name, repo.pushed_at, repo, Object.keys(languages));
+                })
+            }
+        });
+    });
+}
