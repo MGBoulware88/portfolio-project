@@ -10,9 +10,11 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://codepen.io/GreenSock/pen/JGaKdQ.css" rel="stylesheet">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="public/css/cube.css">
     <link rel="stylesheet" href="public/css/glow.css">
     <link rel="stylesheet" href="public/css/slider.css">
@@ -20,60 +22,63 @@
     <link rel="stylesheet" href="public/css/projects.css">
     <link rel="stylesheet" href="public/css/background.css">
     <link rel="stylesheet" href="public/css/collaborators.css">
+    <link rel="stylesheet" href="public/css/typewriter.css">
+    <link rel="stylesheet" href="public/css/jokes.css">
+    <link rel="stylesheet" href="public/css/bio.css">
 
 </head>
 <!-- pad the body slightly more on the x-axis -->
 
 <body>
     <!-- BACKGROUND IMAGE -->
-    <img src="https://images.unsplash.com/photo-1539035104074-dee66086b5e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjI0MX0&auto=format&fit=crop&w=2550&q=80" alt="background" class="background-image">
+    <img src="https://images.unsplash.com/photo-1539035104074-dee66086b5e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjI0MX0&auto=format&fit=crop&w=2550&q=80"
+        alt="background" class="background-image">
     <!-- NAV BAR -->
     <nav class="navbar row container-fluid bg-dark text-light">
         <h1 class="typewriter">Hello and Welcome!</h1>
     </nav>
     <main class="p-4">
         <section class="d-flex row">
-            <!-- BIO CARD -->
-            <div class="side col-lg-4 pt-2">
-                <card class="card m-auto border-3" style="width: 18rem">
-                    <div class="">
-                        <img class="headshot img-fluid" src="./static/babyphoto.png" alt="Gray Boulware Headshot">
+            <!-- BIO SECTION -->
+            <div class="col-lg-4 pt-2 d-flex justify-content-center">
+                <div class="app-container flex-column">
+                    <div class="app-top-bar">
+                      <h1 class="app-heading">NAME HERE</h1>
                     </div>
-                    <div class="bio bg-fafafa">
-                        <h3 class="text-center text-primary fw-bolder fs-4">Gray Boulware</h3>
-                        <p
-                            class="text-center text-center border-bottom border-3 text-secondary fs-small fst-italic fw-bold p-1">
-                            Product Manager | Software Engineer</p>
-                        <h4 class="text-center text-primary fw-bolder fs-4">Top Skills</h4>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item active">Mickey Mouse Club Member</li>
-                            <li class="list-group-item">Coloring inside the lines</li>
-                            <li class="list-group-item active">Full Stack Lego Engineering</li>
-                            <li class="list-group-item">Driving the girls crazy</li>
-                            <li class="list-group-item active">Eating my dinner (no veggies)</li>
-                            <li class="list-group-item disabled text-decoration-line-through">Wetting the bed</li>
-                        </ul>
+                    <div class="button button-dial">
+                      <span class="button-dial-spoke"></span>
+                      <span class="button-dial-spoke"></span>
+                      <span class="button-dial-spoke"></span>
+                      <span class="button-dial-spoke"></span>
+                      <span class="button-dial-spoke"></span>
+                      <span class="button-dial-spoke"></span>
+                      
+                      <div class="button-dial-top"></div>
+                      <div class="button-dial-label">
+                        <img class="img-responsive bio-image" src="static/babyphoto.png">
+                      </div>
                     </div>
-                    <div class="icon-tray d-flex justify-content-around bg-primary align-items-center">
-                        <a target="_blank" rel="noreferrer noopener" href="https://github.com/MGBoulware88/"><input
-                                title="Follow me on gitHub" class="mt-1 icon" type="image" src="./static/github.svg"
-                                alt="gitHub link"></a>
-                        <a target="_blank" rel="noreferrer noopener"
-                            href="https://www.linkedin.com/in/gray-boulware-6538345b/"><input
-                                title="Connect with me on LinkedIn" class="icon mt-1" type="image"
-                                src="./static/linkedin.svg" alt="LinkedIn link"></a>
-                        <a target="_blank" rel="noreferrer noopener" title="Email me"
-                            href="mailto:gray.boulware@gmail.com">
-                            <div class="d-none">:|</div><input class="icon mt-1" type="image"
-                                src="./static/envelope-at-fill.svg" alt="email link">
-                        </a>
-                        <a target="_blank" rel="noreferrer noopener"
-                            href="./static/GrayBoulware_Resume&References.pdf"><input title="Download my rèsumè"
-                                class="icon mt-1" type="image" src="./static/file-text-fill.svg" alt="rèsumè link"></a>
+                    <div class="app-content">
+                      <button class="button button-block">
+                        <span class="subtle">SKILL</span> <span>WEB FUNDAMENTALS</span> <div class="button button-small"><i class="fas fa-chevron-right"></i></div>
+                      </button>
+                      <div class="flex-button-container pt-4">
+                        <button class="button button-large">
+                            <i class='bx bxl-html5'></i>
+                            HTML
+                        </button>
+                        <button class="button button-large">
+                            <i class='bx bxl-css3' ></i>
+                            CSS
+                        </button>
+                      </div>
+                      <button class="button button-link">
+                        Update Settings
+                      </button>
                     </div>
-                </card>
+                  </div>
             </div>
-            <!-- END OF BIO CARD -->
+            <!-- END OF SECTION CARD -->
             <!-- this section will have the welcome message, my personal mission statement, another p tbd, and an array-powered daily fun fact or joke -->
             <div class="main pt-4 col-lg-8 text-center">
                 <!-- GLOWING ICONS -->

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+
+:root {
+    --grey: #5E5D5E;
+    --mid-grey: #3f3f3f;
+}
+
+body {
+    background-color: #1f2020;
+    background-size: 40px 40px;
+    position: relative;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.bio-image {
+    border-radius: 50%;
+    height:180px;
+    width: 180px;
+    object-fit: cover;
+}
+
+
+.navbar {
+    margin: 0;
+    width: 100%;
+}
+
+.borders {
+    border-radius: 15px;
+    z-index: 2;
+}
+
+.text-black {
+    color: black;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 900px;
+}
+
+
+.interactive {
+    height: 400px;
+}
+
+.content-section {
+    backdrop-filter: blur(1vw);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: black;
+    font-weight: bold;
+}
