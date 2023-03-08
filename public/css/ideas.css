@@ -48,19 +48,6 @@
     justify-content: center;
 }
 
-.idea-container a {
-    position: relative;
-    display: inline-block;
-    padding: 20px;
-    color: purple;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.5s;
-    letter-spacing: 4px;
-    overflow: hidden;
-    z-index: 2;
-}
-
 .idea-container a:hover {
     background: purple;
     color: #050801;
@@ -94,17 +81,24 @@
     animation: animate1 1s linear infinite;
 }
 
-.next-button {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 500;
+.idea-container a {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    color: purple;
     font-family: system-ui;
     background: #fff85b;
-    padding: 0.5rem;
-    justify-self: end;
-    margin-top: -1rem;
-    margin-right: -3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 1px;
+    font-weight: 500;
+    width: fit-content;
+    margin-top: -2rem;
+    margin-right: -2rem;
     transition: background 0.25s;
+    z-index: 2;
+    align-self: flex-end;
 }
 
 
