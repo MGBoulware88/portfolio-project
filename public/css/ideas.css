@@ -12,18 +12,21 @@
     letter-spacing: 1px;
     align-self: end;
     background: white;
+    color: black;
     box-shadow: 0 0 40px -10px silver;
+    z-index: 1;
 }
 
 .idea-container h1 {
     font-size: 1rem;
+    background-color: black;
     display: inline-block;
     margin: 2rem 0 -1rem -1rem;
     border: var(--border);
     padding: 1rem;
     width: 90%;
     text-align: center;
-    z-index: 1;
+    z-index: 2;
 }
 
 
@@ -36,14 +39,11 @@
     padding: 1rem;
 }
 
-.idea-container p {
-    z-index: 0;
-}
-
 .results .idea {
     width: 400px;
     display: flex;
     flex-wrap: wrap;
+    color: black;
     text-align: center;
     justify-content: center;
 }
@@ -58,7 +58,7 @@
     transition: 0.5s;
     letter-spacing: 4px;
     overflow: hidden;
-    z-index: 0;
+    z-index: 2;
 }
 
 .idea-container a:hover {
