@@ -15,6 +15,9 @@
     border-radius: 15px;
     border: 5px solid white;
     color: white;
+    height: fit-content;
+    align-items: center;
+    margin: auto 0;
 }
 
 .chat li {
