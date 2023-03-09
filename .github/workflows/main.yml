@@ -7,6 +7,6 @@ jobs:
       issues: read
     steps:
       - env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PORTFOLIO_TOKEN }}
         run: |
           gh api repos/octocat/Spoon-Knife/issues
