@@ -3,13 +3,7 @@
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85648/PublicSans-Roman-VF.ttf");
 }
 
-:root {
-  --dark-purple: rgb(15, 1, 19);
-  --neon-blue: rgb(128, 234, 255);
-  --neon-pink: rgb(255, 117, 248);
-  --size: 6;
-  --unit: calc((var(--size) / 100) * 1vmin);
-}
+
 
 * {
   box-sizing: border-box;

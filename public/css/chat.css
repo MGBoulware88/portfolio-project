@@ -1,18 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
 
-/* body {
-  background: #C5DDEB;
-  font: 14px/20px "Lato", Arial, sans-serif;
-  padding: 40px 0;
-  color: white;
-} */
 
-.container {
+.container > .chat {
     margin: 0 auto;
     width: 750px;
     background: #444753;
@@ -20,7 +9,7 @@
 }
 
 .chat {
-    width: 490px;
+    width: 1550px;
     float: left;
     background: #000000;
     border-radius: 15px;
