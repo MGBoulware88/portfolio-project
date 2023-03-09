@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="public/css/buttons.css">
   <link rel="stylesheet" href="public/css/shimmering.css">
   <link rel="stylesheet" href="public/css/projects.css">
+  <link rel="stylesheet" href="public/css/chat.css">
+  <link rel="stylesheet" href="public/css/neon_icons.css">
 </head>
 
 <body>
@@ -53,6 +55,115 @@
     </section>
   </nav>
   <main class="d-flex flex-column">
+    <section class="container-fluid d-flex justify-content-around">
+      <!-- CHAT SECTION -->
+      <section class="chat-section d-flex">
+        <div class="chat">
+          <div class="chat-header clearfix">
+
+            <div class="chat-about">
+              <div class="chat-with">GET TO KNOW GRAY</div>
+            </div>
+          </div> <!-- end chat-header -->
+
+          <div class="chat-history">
+            <ul>
+              <li class="clearfix">
+                <div class="message-data align-right">
+                  <span class="message-data-name">GRAY</span>
+                </div>
+                <div class="message other-message float-right">
+                  Hi Vincent, how are you? How is the project coming along?
+                </div>
+              </li>
+
+              <li>
+                <div class="message-data">
+                  <span class="message-data-name">HIRING MANAGER</span>
+                </div>
+                <div class="message my-message">
+                  Are we meeting today? Project has been already finished and I have results to show you.
+                </div>
+              </li>
+
+              <li class="clearfix">
+                <div class="message-data align-right">
+                  <span class="message-data-name">GRAY</span>
+                </div>
+                <div class="message other-message float-right">
+                  Well I am not sure. The rest of the team is not here yet. Maybe in an hour or so? Have you faced any
+                  problems at the last phase of the project?
+                </div>
+              </li>
+
+              <li>
+                <div class="message-data">
+                  <span class="message-data-name">HIRING MANAGER</span>
+                </div>
+                <div class="message my-message">
+                  Actually everything was fine. I'm very excited to show this to our team.
+                </div>
+              </li>
+
+            </ul>
+
+          </div> <!-- end chat-history -->
+
+        </div> <!-- end chat -->
+
+      </section>
+      <!-- END OF CHAT SECTION -->
+
+      <!-- NEON ICONS -->
+      <section>
+        <div id="gasses">
+          <div class="gas he">
+            <a href="#">
+              <span class="number">2</span>
+              <h2 class="symbol">He</h2>
+              <p class="name">Helium</p>
+            </a>
+
+          </div>
+          <div class="gas ne">
+            <a href="">
+              <span class="number">10</span>
+              <h2 class="symbol">Ne</h2>
+              <p class="name">Neon</p>
+            </a>
+
+          </div>
+          <div class="gas ar">
+            <a href="">
+              <span class="number">18</span>
+              <h2 class="symbol">Ar</h2>
+              <p class="name">Argon</p>
+            </a>
+
+          </div>
+          <div class="gas kr">
+            <a href="">
+              <span class="number">36</span>
+              <h2 class="symbol">Kr</h2>
+              <p class="name">Krypton</p>
+            </a>
+
+          </div>
+          <div class="gas xe">
+            <a href="">
+              <span class="number">54</span>
+              <h2 class="symbol">Xe</h2>
+              <p class="name">Xenon</p>
+            </a>
+
+          </div>
+        </div>
+      </section>
+      <!-- END OF NEON ICONS -->
+    </section>
+
+
+
     <section class="container-fluid d-flex">
       <!-- NEON SIGN -->
       <section class="neon-sign">
@@ -120,6 +231,33 @@
     integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="public/js/tocome.js"></script>
+
+  <script id="message-template" type="text/x-handlebars-template">
+    <li class="clearfix">
+      <div class="message-data align-right">
+        <span class="message-data-time" >{{time}}, Today</span> &nbsp; &nbsp;
+        <span class="message-data-name" >GRAY</span>
+      </div>
+      <div class="message other-message float-right">
+        {{messageOutput}}
+      </div>
+    </li>
+  </script>
+
+
+  <script id="message-response-template" type="text/x-handlebars-template">
+    <li>
+      <div class="message-data">
+        <span class="message-data-name">HIRING MANAGER</span>
+        <span class="message-data-time">{{time}}, Today</span>
+      </div>
+      <div class="message my-message">
+        {{response}}
+      </div>
+    </li>
+  </script>
+
+  <script src="public/js/chat.js"></script>
 </body>
 
 </html>

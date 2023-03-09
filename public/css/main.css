@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
-
+@font-face {
+    font-family: "Neon Glow";
+    src: url(https://assets.codepen.io/230569/NeonGlow-8VLz.ttf);
+  }
 
 * {
     margin: 0;
@@ -10,6 +13,14 @@
 body {
     background: black;
 }
+
+  
+main {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
 
 a {
     text-decoration: none;
