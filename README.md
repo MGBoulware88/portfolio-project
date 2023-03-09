@@ -47,6 +47,27 @@ $ yarn start
 
 ```
 
+## :white_check_mark: Chanelog ##
+
+```bash
+# Original Upload Date: 25 Feb '23:
+- Learned Bootstrap and implemented the HTML and CSS
+
+# Original Upload Date: 27 Feb '23:
+- Implemented GitHub API
+- Uploaded GitHub commit graph
+
+# Original Upload Date: 2 Mar '23:
+- Updated JavaScript
+- Added animations
+
+# Original Upload Date: 7 Mar '23:
+- Reorganized and structued filesytem
+
+# Original Upload Date: 9 Mar '23:
+- Started over!!!
+```
+
 ## :memo: License ##
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
