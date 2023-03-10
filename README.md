@@ -15,8 +15,6 @@
 
   <img alt="License" src="https://img.shields.io/github/license/MGBoulware88/portfolio-project?color=56BEB8">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/portfolio-project?color=56BEB8" /> -->
-
   <img alt="Github forks" src="https://img.shields.io/github/forks/MGBoulware88/portfolio-project?color=56BEB8" />
 
   <img alt="Github stars" src="https://img.shields.io/github/stars/MGBoulware88/portfolio-project?color=56BEB8" />
@@ -34,7 +32,7 @@
 
 ```bash
 # Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/portfolio-project
+$ git clone https://github.com/MGBoulware88/portfolio-project
 
 # Access
 $ cd portfolio-project
