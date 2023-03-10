@@ -6,7 +6,7 @@
     --neon-pink: rgb(255, 117, 248);
     --size: 6;
     --unit: calc((var(--size) / 100) * 1vmin);
-  }
+}
 
 * {
     margin: 0;
@@ -15,15 +15,16 @@
 }
 body {
     background: black;
+    transition: background-color 1000ms linear;
 }
 
-  
 main {
+    padding-top: 12%;
     align-items: center;
     display: flex;
     justify-content: center;
     min-height: 100vh;
-  }
+}
 
 a {
     text-decoration: none;

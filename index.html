@@ -23,43 +23,50 @@
   <link rel="stylesheet" href="public/css/chat.css">
   <link rel="stylesheet" href="public/css/neon_icons.css">
   <link rel="stylesheet" href="public/css/glitch.css">
+  <link rel="stylesheet" href="public/css/rain.css">
 </head>
 
 <body>
-  <nav class="navbar container-fluid d-flex flex-column">
-    <section class="text-effect">
-      <h1 class="neon" data-text="GRAY" spellcheck="false" contenteditable>GREY BOULWARE</h1>
-      <div class="gradient"></div>
-      <div class="spotlight"></div>
-    </section>
-    <section class="container-fluid d-flex introduction">
-      <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        GITHUB
-      </a>
-      <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        LINKEDIN
-      </a>
-      <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        RESUME
-      </a>
-    </section>
+  <section>
+    <canvas id="main"></canvas>
+    <canvas id="middle"></canvas>
+    <canvas id="final"></canvas>
+  </section>
 
-    <div id="inside"></div>
-  </nav>
 
   <main class="d-flex flex-column">
+    <nav class="navbar container-fluid d-flex flex-column">
+      <section class="text-effect">
+        <h1 class="neon" data-text="GRAY" spellcheck="false" contenteditable>GREY BOULWARE</h1>
+        <div class="gradient"></div>
+        <div class="spotlight"></div>
+      </section>
+      <section class="container-fluid d-flex introduction">
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          GITHUB
+        </a>
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          LINKEDIN
+        </a>
+        <a href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          RESUME
+        </a>
+      </section>
+
+      <div id="inside"></div>
+    </nav>
     <section class="container-fluid d-flex justify-content-around pb-5">
       <!-- CHAT SECTION -->
       <section class="chat-section d-flex">
@@ -280,6 +287,7 @@
 
   <script src="public/js/chat.js"></script>
   <script src="public/js/glitch.js"></script>
+  <script src="public/js/rain.js"></script>
 </body>
 
 </html>
