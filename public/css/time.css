@@ -7,13 +7,12 @@ body {
 
 #inside {
   font-family: 'Work Sans', sans-serif;
-/*   font-family: 'Dosis', sans-serif; */
   color: rgb(72, 184, 228);
   position: absolute;
   z-index: 1;
   overflow: show;
   margin: auto;
-  top: 15rem;
+  top: -20rem;
   left: 40%;
   bottom: 0;
   right: 0;
