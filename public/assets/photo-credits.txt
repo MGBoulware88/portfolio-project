@@ -1,7 +1,0 @@
-Photo by <a href="https://unsplash.com/@wolfgang_hasselmann?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Wolfgang Hasselmann</a> on <a href="https://unsplash.com/photos/B5Qb_KYDKDU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-Photo by <a href="https://unsplash.com/@yfwong?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Yifei Wong</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-Photo by Christina Morillo: https://www.pexels.com/photo/python-book-1181671/
-
-Photo by Miguel Á. Padriñán: https://www.pexels.com/photo/four-letter-tiles-1591061/
