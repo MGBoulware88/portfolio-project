@@ -1,79 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cbwconline.com/Fonts/Hello Denver/stylesheet.css" type="text/css" />
-
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Warnes' type='text/css'>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="public/css/main.css">
-  <link rel="stylesheet" href="public/css/time.css">
-  <link rel="stylesheet" href="public/css/tocome.css">
-  <link rel="stylesheet" href="public/css/buttons.css">
-  <link rel="stylesheet" href="public/css/shimmering.css">
-  <link rel="stylesheet" href="public/css/projects.css">
-  <link rel="stylesheet" href="public/css/chat.css">
-  <link rel="stylesheet" href="public/css/neon_icons.css">
-  <link rel="stylesheet" href="public/css/glitch.css">
-  <link rel="stylesheet" href="public/css/rain.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gray's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://codepen.io/GreenSock/pen/JGaKdQ.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+<!-- pad the body slightly more on the x-axis -->
 
 <body>
-  <section>
-    <canvas id="main"></canvas>
-    <canvas id="middle"></canvas>
-    <canvas id="final"></canvas>
-  </section>
-
-
-  <main class="d-flex flex-column">
-    <nav class="navbar container-fluid d-flex flex-column">
-      <section class="text-effect">
-        <h1 class="neon" data-text="GRAY" spellcheck="false" contenteditable>GREY BOULWARE</h1>
-        <div class="gradient"></div>
-        <div class="spotlight"></div>
-      </section>
-      <section class="container-fluid d-flex introduction">
-        <a href="#">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          GITHUB
-        </a>
-        <a href="#">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          LINKEDIN
-        </a>
-        <a href="#">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          RESUME
-        </a>
-      </section>
-
-      <div id="inside"></div>
+    <nav class="navbar row container-fluid bg-dark text-light">
+        <h1 class="typewriter">Hello and Welcome!</h1>
     </nav>
-    <main class="px-4 pb-3">
-        <section class="d-flex row">
+    <div class="px-4 pb-3">
+        <div class="d-flex row">
             <!-- the left side of this first row will hold my bio card -->
             <div class="side col-lg-4 pt-2">
                 <card class="card m-auto border-3" style="width: 18rem">
                     <div class="">
-                        <img class="headshot img-fluid" src="./static/babyphoto.png" alt="Gray Boulware Headshot">
+                        <img class="headshot img-fluid" src="./static/ProHeadshot.jpg" alt="Gray Boulware Headshot">
                     </div>
                     <div class="bio bg-fafafa">
                         <h3 class="text-center text-primary fw-bolder fs-4">Gray Boulware</h3>
@@ -108,16 +60,15 @@
                                 class="icon mt-1" type="image" src="./static/file-text-fill.svg" alt="rèsumè link"></a>
                     </div>
 
-            <div class="chat-about">
-              <div class="chat-with">GET TO KNOW GRAY</div>
+                </card>
             </div>
             <!-- this section will have the welcome message, my personal mission statement, another p tbd, and an array-powered daily fun fact or joke -->
             <div class="main pt-4 col-lg-8 text-center">
                 <h2 class="border-bottom border-primary pb-4 text-black text-wrap ts">Howdy, I'm Gray. Welcome to my portfolio
                     site!</h2>
                 <p class="border-bottom border-primary py-4 text-wrap">I am a Ft. Worth, Texas based Product Manager
-                    transitioning into web development. I am currently attending the CodingDojo Full Stack Stoftware
-                    Engineering Bootcamp and plan to graduate at the end of May 2023. I absolutely love working in
+                    transitioning into web development. I am currently attending the CodingDojo Full Stack Software
+                    Developer Bootcamp and plan to graduate at the end of May 2023. I absolutely love working in
                     software, but recently decided I wanted to be on the engineer side of the team instead of the
                     product side.</p>
                 <p class="border-bottom border-primary pb-4 text-wrap">My goal is it use my new software engineering
@@ -139,8 +90,8 @@
                     <output class="row text-center text-light" id="container"></output>
                 </form>
             </div>
-        </section>
-        <section class="d-flex">
+        </div>
+        <div class="d-flex">
             <div class="col-4 text-center pt-4">
                 <div class="container threed-container">
                     <div class="hi">
@@ -187,57 +138,23 @@
                             </div>
                         </div>
 
-              <li>
-                <div class="message-data">
-                  <span class="message-data-name">HIRING MANAGER</span>
+                    </div>
                 </div>
-                <div class="message my-message">
-                  Actually everything was fine. I'm very excited to show this to our team.
+            </div>
+            <div class="col-8 px-4 d-flex justify-content-around">
+                <!-- eye candy left column-->
+
+                <!-- my projects highlight section -->
+                <div class="text-primary ">
+                    <h3 class="col-8 text-center m-auto text-primary">My Projects! 🤠</h3>
+                    <p class="text-dark text-center">Here are some example of projects I have created or contributed to
+                        on gitHub</p>
+                    <div class="project-container container-fluid d-flex align-items-center p-2"></div>
                 </div>
-              </li>
-
-            </ul>
-
-          </div> <!-- end chat-history -->
-
-        </div> <!-- end chat -->
-
-      </section>
-      <!-- END OF CHAT SECTION -->
-
-      <section class="d-flex flex-column">
-        <!-- NEON ICONS -->
-        <section>
-          <div id="gasses">
-            <div class="gas xe">
-              <a href="#">
-                <span class="number">2</span>
-                <h2 class="symbol">Gh</h2>
-                <p class="name">GitHub</p>
-              </a>
-
             </div>
-            <div class="gas ne">
-              <a href="">
-                <span class="number">10</span>
-                <h2 class="symbol">Li</h2>
-                <p class="name">LinkedIn</p>
-              </a>
+        </div>
 
-            </div>
-            <div class="gas ar">
-              <a href="">
-                <span class="number">18</span>
-                <h2 class="symbol">Re</h2>
-                <p class="name">Resume</p>
-              </a>
-
-            </div>
-        </section>
-        <section class="d-flex">
-           
-        </section>
-    </main>
+    </div>
     <!-- Axios CDN for API -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"
         integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ=="
