@@ -1,5 +1,6 @@
 (function () {
     getProjects();
+    // getProjectData();
 })()
 /* 
 commenting out all the API code I am no longer using
@@ -63,7 +64,7 @@ const project_container = document.querySelector(".project-container");
 // }
 
 async function getProjects() {
-    $.getJSON("https://api.github.com/users/mgboulware88/repos?per_page=53", function (data) {
+    $.getJSON("https://api.github.com/users/mgboulware88/repos?per_page=100", function (data) {
         data.forEach(function (repo) {
             if (repo.topics.length > 0) {
                 $.getJSON(repo.languages_url, function (languages) {
@@ -73,6 +74,12 @@ async function getProjects() {
         });
     });
 }
+
+// async function getProjectData() {
+//     $.getJSON("https://api.github.com/users/mgboulware88/repos?per_page=100", function (data) {
+//         data.forEach(repo => console.log(repo))
+//     });
+// }
 
 function populate(name, pushed_at, repo, languages) {
     var card = document.createElement("div");
@@ -170,8 +177,7 @@ function toTitleCase(str) {
     );
 }
 
-console.clear();
-
+//3D box animation
 select = e => document.querySelector(e);
 selectAll = e => document.querySelectorAll(e);
 
